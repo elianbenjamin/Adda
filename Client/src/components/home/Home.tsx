@@ -1,6 +1,7 @@
 import style from './home.module.scss';
 import logo from '../../assets/logo.jpg'
-import video from '../../assets/video.mp4';
+
+import modelaje from '../../assets/modelaje.mp4';
 
 const Home = () => {
   return (
@@ -16,9 +17,7 @@ const Home = () => {
           <li>Contacto</li>
         </ul>
       </nav>
-      <video autoPlay loop>
-        <source src={video} type='video/mp4' />
-      </video>
+      <video className={style.video} src={modelaje} autoPlay loop muted />
     </div>
   )
 }
