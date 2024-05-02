@@ -1,7 +1,7 @@
-import style from './home.module.scss';
-import logo from '../../assets/logo.jpg'
+import style from "./home.module.scss";
+import logo from "../../assets/logo.jpg";
 
-import modelaje from '../../assets/modelaje.mp4';
+import modelaje from "../../assets/modelaje.mp4";
 
 const Home = () => {
   return (
@@ -17,9 +17,9 @@ const Home = () => {
           <li>Contacto</li>
         </ul>
       </nav>
-      <video className={style.video} src={modelaje} autoPlay loop muted />
+      <video src={modelaje} autoPlay loop muted />
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
