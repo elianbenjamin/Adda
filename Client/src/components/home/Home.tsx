@@ -17,7 +17,9 @@ const Home = () => {
           <li>Contacto</li>
         </ul>
       </nav>
-      <video src={modelaje} autoPlay loop muted />
+      <div className={style.videoContainer}>
+        <video src={modelaje} autoPlay loop muted />
+      </div>
     </div>
   );
 };
