@@ -1,0 +1,75 @@
+@import '../../index.scss';
+
+.navBar {
+  @include flex(flex-start, center);
+  height: 65px;
+  width: 100%;
+  // background-color: transparent;
+  background-color: black;
+  z-index: 10;
+  padding: 10px;
+  transition: background-color 0.3s;
+
+  img {
+    height: 100%;
+    border-radius: 25px;
+  }
+
+  ul {
+    @include flex(flex-start, center);
+    list-style-type: none;
+    flex: 1;
+    gap: 40px;
+    user-select: none;
+    margin-left: 35px;
+
+    li {
+      @include flex (center, center);
+      position: relative;
+      color: aliceblue;
+      z-index: 0;
+      overflow: hidden;
+      cursor: pointer;
+      transition: color 0.3s;
+
+      a {
+        text-decoration: none;
+        color: inherit;
+        height: 100%;
+        width: 100%;
+        padding: 5px;
+      }
+
+      &:hover {
+        color: black;
+      }
+      &::after {
+        content: "";
+        background-color: $gray;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transition: transform 0.3s;
+        transform: translateX(-101%);
+      }
+      &:hover::after {
+        transform: translateX(0);
+      }
+    }
+    .active {
+      background-color: $gray;
+      color: black;
+    }
+  }
+
+  svg {
+    height: 35px;
+    width: 35px;
+    color: aliceblue;
+    margin: 25px;
+    cursor: pointer;
+  }
+}

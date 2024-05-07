@@ -1,0 +1,27 @@
+@import '../../index.scss';
+
+.About {
+  background-color: $gray;
+  min-height: 100vh;
+  padding: 35px;
+
+  .section1 {
+    @include flex (space-between, center);
+    background-color: $pink;
+    gap: 20px;
+
+    .image {
+      height: 200px;
+      width: 300px;
+      background-color: black;
+      color: white;
+    }
+
+    .textContainer {
+      
+    }
+
+    height: 300px;
+    width: 100%;
+  }
+}

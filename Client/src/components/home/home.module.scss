@@ -1,74 +1,17 @@
 @import "../../index.scss";
 
 .Home {
-  @include flex(flex-start, stretch, column);
+  @include flex(center, center);
   width: 100%;
   max-height: 100vh;
   height: 100vh;
-  position: relative;
+  position: absolute;
+  top: 0;
+  z-index: -1;
 
-  nav {
-    @include flex(flex-start, center);
-    height: 65px;
-    background-color: transparent;
-    gap: 50px;
-    position: absolute;
-
-    img {
-      height: 100%;
-      border-radius: 25px;
-    }
-
-    ul {
-      @include flex(flex-start, center);
-      list-style-type: none;
-      flex: 1;
-      gap: 40px;
-      user-select: none;
-
-      li {
-        position: relative;
-        color: aliceblue;
-        z-index: 0;
-        overflow: hidden;
-        padding: 5px;
-        cursor: pointer;
-        transition: color 0.3s;
-
-        &:hover {
-          color: black;
-        }
-        &::after {
-          content: "";
-          background-color: $gray;
-          height: 100%;
-          width: 100%;
-          position: absolute;
-          top: 0;
-          left: 0;
-          z-index: -1;
-          transition: transform 0.3s;
-          transform: translateX(-101%);
-        }
-        &:hover::after {
-          transform: translateX(0);
-        }
-      }
-    }
+  video {
+    object-fit: cover;
+    min-height: 100%;
+    min-width: 100%;
   }
-
-  .videoContainer {
-    @include flex (center, center);
-    z-index: -100;
-    height: 100%;
-    width: 100%;
-    overflow: hidden;
-
-    video {
-      object-fit: cover;
-      min-height: 100%;
-      min-width: 100%;
-    }
-  }
-
 }
