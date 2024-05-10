@@ -18,17 +18,18 @@ export const NavBar = () => {
         <li className={pathname === "/about" ? style.active : ""}>
           <Link to="/about">Quienes somos</Link>
         </li>
-        <li>
-          <Link>Escuela</Link>
+        <li className={pathname === "/school" ? style.active : ""}>
+          <Link to="/school">Escuela</Link>
+        </li>
+        <li className={pathname === "/photos" ? style.active : ""}>
+        
+        <Link to="/photos">Fotos</Link> 
         </li>
         <li>
-          <Link>Fotos</Link>
+        Noticias
         </li>
         <li>
-          <Link>Noticias</Link>
-        </li>
-        <li>
-          <Link>Contacto</Link>
+        Contacto
         </li>
       </ul>
 
