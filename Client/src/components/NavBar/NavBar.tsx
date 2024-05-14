@@ -2,21 +2,43 @@ import style from "./navBar.module.scss";
 import logo from "../../assets/logo.jpg";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { HomeIcon } from "../../assets/icons";
+import { useEffect, useState } from "react";
 
-export const NavBar = () => {
+interface Props {
+  scroll: (target: "top" | "bottom") => void;
+}
+
+export const NavBar = (props: Props) => {
   const { pathname } = useLocation();
   const navigate = useNavigate();
+  const { scroll } = props;
+  const [isScrolled, setIsScrolled] = useState<boolean>(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) setIsScrolled(true);
+      else setIsScrolled(false);
+    };
+    handleScroll();
+    window.addEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <nav
-      className={style.navBar}
-      style={pathname === "/" ? { backgroundColor: "transparent" } : {}}
+      className={`${style.navBar} ${
+        isScrolled || pathname !== "/" ? style.navBar_active : ""
+      }`}
     >
       <img src={logo} />
 
       <ul>
-        <li className={pathname === "/about" ? style.active : ""}>
-          <Link to="/about">Quienes somos</Link>
+        <li
+          className={pathname === "/about" ? style.active : ""}
+          onClick={() => {
+            scroll("bottom");
+          }}
+        >
+          Quienes Somos
         </li>
         <li className={pathname === "/school" ? style.active : ""}>
           <Link to="/school">Escuela</Link>
@@ -24,19 +46,14 @@ export const NavBar = () => {
         <li className={pathname === "/photos" ? style.active : ""}>
           <Link to="/photos">Fotos</Link>
         </li>
-        {/*  no borres los Link vacios que estan para que tambien tengan el tamaño correcto (pongo esto pq veo que los otros los sacaste jaja) */}
-        <li>
-          <Link>Noticias</Link>
-        </li>
-        <li>
-          <Link>Contacto</Link>
-        </li>
+        <li>Noticias</li>
+        <li>Contacto</li>
       </ul>
 
-      {pathname !== "/" && (
+      {(pathname !== "/" || isScrolled) && (
         <HomeIcon
           onClick={() => {
-            navigate("/");
+            scroll("top");
           }}
         />
       )}
