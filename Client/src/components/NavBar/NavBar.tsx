@@ -35,10 +35,12 @@ export const NavBar = (props: Props) => {
         <li
           className={pathname === "/about" ? style.active : ""}
           onClick={() => {
-            scroll("bottom");
+            setTimeout(() => {
+              scroll("bottom");
+            }, 0);
           }}
         >
-          Quienes Somos
+          <Link to={"/"}>Quienes Somos</Link>
         </li>
         <li className={pathname === "/school" ? style.active : ""}>
           <Link to="/school">Escuela</Link>

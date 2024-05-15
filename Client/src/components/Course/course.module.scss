@@ -1,0 +1,14 @@
+@import '../../index.scss';
+
+.Course {
+  height: 80%;
+  border: solid black 1px;
+  width: 350px;
+
+  h1 {
+    @include flex (flex-start, center);
+    border: solid red 1px;
+    height: 15%;
+    padding: 10px;
+  }
+}

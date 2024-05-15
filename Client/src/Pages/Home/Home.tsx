@@ -1,5 +1,5 @@
 import style from "./home.module.scss";
-import About from "../About/About";
+import About from "../../components/About/About";
 import modelaje from "../../assets/modelaje.mp4";
 import { forwardRef, useImperativeHandle, useRef } from "react";
 

@@ -1,0 +1,21 @@
+@import '../../index.scss';
+
+.School {
+    @include flex (center, stretch, column);
+    width: 100vw;
+    height: 100vh;
+    padding: 25px;
+    padding-top: 65px;
+
+    .title {
+        @include flex (flex-start, center);
+        height: 70px;
+        border-bottom: solid $gray;
+    }
+
+    .content {
+        @include flex (space-evenly, center);
+        flex: 1;
+        border: solid blue 1px;
+    }
+}

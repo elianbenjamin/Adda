@@ -16,9 +16,8 @@
 
     .imgContainer {
       @include flex (center, center);
-      background-color: black;
-      border: solid black;
       height: 100%;
+      box-shadow: 2px 2px 8px black;
 
       img {
         height: 100%;

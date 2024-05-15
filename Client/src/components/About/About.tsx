@@ -1,7 +1,7 @@
 import { ForwardedRef, forwardRef } from "react";
 import style from "./about.module.scss";
-import img1 from "../../assets/About_img1.jpg";
-import img2 from "../../assets/ABout_img2.jpg";
+import img1 from '../../assets/About_img1.jpg'
+import img2 from "../../assets/About_img2.jpg";
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const About = forwardRef((_, ref: ForwardedRef<HTMLDivElement>) => {
