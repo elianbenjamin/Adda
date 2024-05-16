@@ -5,14 +5,15 @@
   background-color: $gray;
   height: calc(100vh - 65px);
   width: 100vw;
-  padding: 20px;
+  padding: 25px;
 
-  .section1 {
+  section {
     @include flex(space-between, center);
     background-color: $pink;
     padding: 20px;
     height: 48%;
     gap: 20px;
+    border-radius: 15px;
 
     .imgContainer {
       @include flex (center, center);
@@ -30,8 +31,5 @@
       gap: 15px;
       flex: 7;
     }
-  }
-  .section2 {
-    @extend .section1;
   }
 }

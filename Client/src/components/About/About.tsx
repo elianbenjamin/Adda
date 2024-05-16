@@ -7,7 +7,7 @@ import img2 from "../../assets/About_img2.jpg";
 const About = forwardRef((_, ref: ForwardedRef<HTMLDivElement>) => {
   return (
     <div className={style.About} id="About" ref={ref}>
-      <section className={style.section1}>
+      <section>
         <div className={style.imgContainer}>
           <img src={img1} />
         </div>
@@ -35,7 +35,7 @@ const About = forwardRef((_, ref: ForwardedRef<HTMLDivElement>) => {
         </div>
       </section>
 
-      <section className={style.section2}>
+      <section>
         <div className={style.textContainer}>
           <p>
             Cada prenda, cada accesorio que encontrarás en Adda ha sido

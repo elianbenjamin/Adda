@@ -1,11 +1,11 @@
 @import '../../index.scss';
 
 .School {
-    @include flex (center, stretch, column);
+    @include flex (space-between, stretch, column);
     width: 100vw;
     height: 100vh;
-    padding: 25px;
-    padding-top: 65px;
+    padding: $page-padding;
+    gap: 30px;
 
     .title {
         @include flex (flex-start, center);
@@ -16,6 +16,8 @@
     .content {
         @include flex (space-evenly, center);
         flex: 1;
-        border: solid blue 1px;
+        background-color: $pink;
+        border-radius: 15px;
+        box-shadow: 0px 0px 20px 5px $gray;
     }
 }
