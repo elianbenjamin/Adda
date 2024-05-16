@@ -25,11 +25,11 @@ export const NavBar = () => {
           <Link to="/photos">Fotos</Link>
         </li>
         {/*  no borres los Link vacios que estan para que tambien tengan el tamaño correcto (pongo esto pq veo que los otros los sacaste jaja) */}
-        <li>
-          <Link>Noticias</Link>
+        <li className={pathname === "/photos" ? style.active : ""}>
+          <Link to="/photos">Noticias</Link>
         </li>
-        <li>
-          <Link>Contacto</Link>
+        <li className={pathname === "/photos" ? style.active : ""}>
+          <Link to="/photos">Contacto</Link>
         </li>
       </ul>
 
