@@ -2,21 +2,45 @@ import style from "./navBar.module.scss";
 import logo from "../../assets/logo.jpg";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { HomeIcon } from "../../assets/icons";
+import { useEffect, useState } from "react";
 
-export const NavBar = () => {
+interface Props {
+  scroll: (target: "top" | "bottom") => void;
+}
+
+export const NavBar = (props: Props) => {
   const { pathname } = useLocation();
-  const navigate = useNavigate();
+  /* const navigate = useNavigate(); */
+  const { scroll } = props;
+  const [isScrolled, setIsScrolled] = useState<boolean>(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) setIsScrolled(true);
+      else setIsScrolled(false);
+    };
+    handleScroll();
+    window.addEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <nav
-      className={style.navBar}
-      style={pathname === "/" ? { backgroundColor: "transparent" } : {}}
+      className={`${style.navBar} ${
+        isScrolled || pathname !== "/" ? style.navBar_active : ""
+      }`}
     >
       <img src={logo} />
 
       <ul>
-        <li className={pathname === "/about" ? style.active : ""}>
-          <Link to="/about">Quienes somos</Link>
+        <li
+          className={pathname === "/about" ? style.active : ""}
+          onClick={() => {
+            setTimeout(() => {
+              scroll("bottom");
+            }, 0);
+          }}
+        >
+          <Link to={"/"}>Quienes Somos</Link>
         </li>
         <li className={pathname === "/school" ? style.active : ""}>
           <Link to="/school">Escuela</Link>
@@ -33,10 +57,10 @@ export const NavBar = () => {
         </li>
       </ul>
 
-      {pathname !== "/" && (
+      {(pathname !== "/" || isScrolled) && (
         <HomeIcon
           onClick={() => {
-            navigate("/");
+            scroll("top");
           }}
         />
       )}

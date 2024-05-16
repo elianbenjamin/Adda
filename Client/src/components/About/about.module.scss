@@ -1,27 +1,35 @@
-@import '../../index.scss';
+@import "../../index.scss";
 
 .About {
+  @include flex (space-between, stretch, column);
   background-color: $gray;
-  min-height: 100vh;
-  padding: 35px;
+  height: calc(100vh - 65px);
+  width: 100vw;
+  padding: 25px;
 
-  .section1 {
-    @include flex (space-between, center);
+  section {
+    @include flex(space-between, center);
     background-color: $pink;
+    padding: 20px;
+    height: 48%;
     gap: 20px;
+    border-radius: 15px;
 
-    .image {
-      height: 200px;
-      width: 300px;
-      background-color: black;
-      color: white;
+    .imgContainer {
+      @include flex (center, center);
+      height: 100%;
+      box-shadow: 2px 2px 8px black;
+
+      img {
+        height: 100%;
+      }
     }
 
     .textContainer {
-      
+      @include flex(flex-start, center, column);
+      font-size: 1.2em;
+      gap: 15px;
+      flex: 7;
     }
-
-    height: 300px;
-    width: 100%;
   }
 }
