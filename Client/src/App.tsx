@@ -1,11 +1,12 @@
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import NavBar from "./components/NavBar/NavBar";
-import About from "./components/About/About";
-import Home from "./components/Home/Home";
-import School from "./components/School/School";
+
+import Home from "./Pages/Home/Home";
+
 import Photos from "./components/Photos/Photos";
 import { RefObject, useRef } from "react";
+import School from "./Pages/School/School";
 
 function App() {
   const ref = useRef<{

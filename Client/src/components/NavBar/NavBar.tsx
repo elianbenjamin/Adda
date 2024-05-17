@@ -10,7 +10,7 @@ interface Props {
 
 export const NavBar = (props: Props) => {
   const { pathname } = useLocation();
-  /* const navigate = useNavigate(); */
+  const navigate = useNavigate();
   const { scroll } = props;
   const [isScrolled, setIsScrolled] = useState<boolean>(false);
 
