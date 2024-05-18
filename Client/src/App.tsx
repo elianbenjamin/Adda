@@ -3,8 +3,10 @@ import { Routes, Route } from "react-router-dom";
 import NavBar from "./components/NavBar/NavBar";
 import Home from "./Pages/Home/Home";
 import School from "./Pages/School/School";
-import Photos from "./components/Photos/Photos";
+import Photos from "./Pages/Photos/Photos";
 import { RefObject, useRef } from "react";
+import Footer from "./components/Footer/Footer";
+import News from './Pages/News/News';
 
 function App() {
   const ref = useRef<{
@@ -31,7 +33,10 @@ function App() {
         <Route path="/" element={<Home ref={ref} />} />
         <Route path="/school" element={<School />} />
         <Route path="/photos" element={<Photos />} />
+        <Route path="/news" element={<News />} />
       </Routes>
+
+      <Footer />
     </>
   );
 }

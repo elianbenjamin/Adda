@@ -6,6 +6,9 @@
   height: calc(100vh - 65px);
   width: 100vw;
   padding: 25px;
+  border-bottom: solid black 1px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
 
   section {
     @include flex(space-between, center);

@@ -3,7 +3,6 @@
 .Home {
   @include flex(center, center, column);
   width: 100%;
-  position: absolute;
   top: 0;
   z-index: -1;
 
