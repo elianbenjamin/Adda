@@ -48,11 +48,10 @@ export const NavBar = (props: Props) => {
         <li className={pathname === "/photos" ? style.active : ""}>
           <Link to="/photos">Fotos</Link>
         </li>
-        {/*  no borres los Link vacios que estan para que tambien tengan el tamaño correcto (pongo esto pq veo que los otros los sacaste jaja) */}
-        <li className={pathname === "/photos" ? style.active : ""}>
+        <li className={pathname === "/news" ? style.active : ""}>
           <Link to="/photos">Noticias</Link>
         </li>
-        <li className={pathname === "/photos" ? style.active : ""}>
+        <li className={pathname === "/" ? style.active : ""}>
           <Link to="/photos">Contacto</Link>
         </li>
       </ul>

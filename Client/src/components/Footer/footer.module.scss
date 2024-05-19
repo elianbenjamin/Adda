@@ -6,6 +6,7 @@
   max-height: 50vh;
   background-color: rgb(253, 253, 253);
 
+
   .left {
     @include flex(center, center);
     flex: 1;
