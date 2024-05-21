@@ -49,10 +49,7 @@ export const NavBar = (props: Props) => {
           <Link to="/photos">Fotos</Link>
         </li>
         <li className={pathname === "/news" ? style.active : ""}>
-          <Link to="/photos">Noticias</Link>
-        </li>
-        <li className={pathname === "/" ? style.active : ""}>
-          <Link to="/photos">Contacto</Link>
+          <Link to="/news">Noticias</Link>
         </li>
       </ul>
 

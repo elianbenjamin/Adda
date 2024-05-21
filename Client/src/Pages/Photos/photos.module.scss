@@ -1,9 +1,15 @@
-.container {
+@import '../../index.scss';
+
+.Photos {
     width: 100vw;
-    min-height: 100vh;
+    height: 100vh;
+    max-height: 100vh;
+    overflow: scroll;
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: $page-padding;
+    padding-top: 90px;
 
     .image{
         width: 450px;
