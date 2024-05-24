@@ -6,7 +6,11 @@ $page-padding: 65px 25px 25px 25px;
 
 @font-face {
   font-family: 'QuickSand';
-  src: url('../src/assets/QuickSand.ttf');
+  src: url('../src/assets/fonts/QuickSand.ttf');
+}
+@font-face {
+  font-family: 'Butler';
+  src: url('../src/assets/fonts/Butler.otf');
 }
 
 :root {

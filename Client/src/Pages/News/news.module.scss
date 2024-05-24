@@ -1,3 +1,29 @@
 .News {
-  
+  height: 200vh;
+  border: solid red;
+
+  div {
+    height: 100vh;
+    border: solid blue;
+  }
+
+  h1 {
+    opacity: 0;
+  }
+
+  .titleAnimation {
+    animation: titleAnimation 1s forwards;
+
+  }
+}
+
+@keyframes titleAnimation {
+  from {
+    transform: translateY(-200px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
