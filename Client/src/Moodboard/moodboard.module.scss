@@ -1,0 +1,40 @@
+@import '../index.scss';
+
+.Moodboard {
+  @include flex (center, stretch);
+  height: calc(100vh - 65px);
+  padding: 30px;
+  gap: 30px;
+  background-color: $pink;
+
+  .ImagesContainer {
+    @include flex (center, center);
+    width: 45%;
+
+    div {
+      @include flex (center, center);
+      height: 80%;
+      overflow: hidden;
+      border: solid black 7px;
+
+      img {
+        max-height: 100%;
+      }
+    }
+  }
+  .infoContainer {
+    @include flex (center, center, column);
+    width: 65%;
+
+    h1 {
+      font-size: 6em;
+      font-family: 'Butler';
+    }
+
+    p {
+      line-height: $line-height;
+      width: 70%;
+      font-size: 1.3em;
+    }
+  }
+}
