@@ -5,6 +5,7 @@ import { forwardRef, useImperativeHandle, useRef } from "react";
 import TheBrand from "../../components/TheBrand/TheBrand";
 import Quote from "../../components/Quote/Quote";
 import MisionVisionValues from "../../components/MisionVisionValues/MisionVisionValues";
+import { WhatsappIconGreen } from "../../assets/icons";
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const Home = forwardRef((_, ref) => {
@@ -25,7 +26,15 @@ const Home = forwardRef((_, ref) => {
       <TheBrand />
       <Quote />
       <MisionVisionValues />
+      <a
+        className={style["whatsapp-container"]}
+        href={`https://wa.me/3537562542?text=${WhatsappIconGreen}`}
+        target="_blank"
+      >
+        <WhatsappIconGreen/>
+      </a>
     </div>
+    
   );
 });
 
