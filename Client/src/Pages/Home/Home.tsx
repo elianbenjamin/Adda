@@ -5,7 +5,7 @@ import { forwardRef, useImperativeHandle, useRef } from "react";
 import TheBrand from "../../components/TheBrand/TheBrand";
 import Quote from "../../components/Quote/Quote";
 import MisionVisionValues from "../../components/MisionVisionValues/MisionVisionValues";
-import Moodboard from "../../Moodboard/Moodboard";
+import Moodboard from "../../components/Moodboard/Moodboard";
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const Home = forwardRef((_, ref) => {
