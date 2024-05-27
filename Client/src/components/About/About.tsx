@@ -1,4 +1,4 @@
-import { ForwardedRef, forwardRef } from "react";
+import { ForwardedRef, forwardRef, useEffect, useRef, useState } from "react";
 import style from "./about.module.scss";
 import img1 from "../../assets/About_img1.jpg";
 import img2 from "../../assets/About_img2.jpg";
@@ -6,34 +6,40 @@ import mainBackground from "../../assets/images/aboutBackground.jpg";
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const About = forwardRef((_, ref: ForwardedRef<HTMLDivElement>) => {
+  const titleRef = useRef<HTMLHeadingElement>(null);
+  const subtitleRef = useRef<HTMLParagraphElement>(null);
+  const [titleAnimation, setTitleAnimation] = useState<boolean>(false);
+  const [subtitleAnimation, setSubtitleAnimation] = useState<boolean>(false);
+
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      if (titleRef.current && subtitleRef.current) {
+        const titleDistance = titleRef.current.getBoundingClientRect().top;
+        const subtitleDistance =
+          subtitleRef.current.getBoundingClientRect().top;
+        if (window.innerHeight <= titleDistance) setTitleAnimation(true);
+        if (window.innerHeight <= subtitleDistance) setSubtitleAnimation(true);
+      }
+    });
+  }, []);
+
   return (
     <div className={style.About}>
       <section className={style.MainContainer} ref={ref}>
-        <h1>ADDA MODELS</h1>
-        <p>ESCUELA Y AGENCIA DE MODELOS PROMOTORES</p>
+        <h1
+          ref={titleRef}
+          className={titleAnimation ? style.titleAnimation : ""}
+        >
+          ADDA MODELS
+        </h1>
+        <p
+          ref={subtitleRef}
+          className={subtitleAnimation ? style.subtitleAnimation : ""}
+        >
+          ESCUELA Y AGENCIA DE MODELOS PROMOTORES
+        </p>
       </section>
-      <section className={style.TheBranchContainer}>
-        <div className={style.imageContainer}></div>
-        <div className={style.infoContainer}>
-          <div className={style.titleContainer}>
-            <h1>LA MARCA</h1>
-            <h3>¿QUIENES SOMOS?</h3>
-          </div>
-
-          <p>
-            FUNDADA EN EL 2024, ADDA MODELS ES UNA MARCA QUE SE CARACTERIZA POR
-            SU DIVERCIDAD E INCLUSION, ADEMÁS DEL ESTILO IRREVERENTE E ICÓNICO.
-            SU PERSONALIDAD REPRESENTA A PERSONAS DE ALMA EFERVESCENTE QUE
-            BUSCAN MARCAR LA DIFERENCIA EN SU DÍA A DÍA.
-          </p>
-          <p>
-            DETRÁS DE LA MARCA HAY UN EQUIPO DE PROFESIONALES Y CREATIVOS DE
-            ESPÍRITU LIBRE, APASIONADOS Y COMPROMETIDOS CON LA CALIDAD Y EL AMOR
-            POR LOS DETALLES. VOCACIÓN Y DEDICACIÓN PURA POR TRABAJAR EN EL
-            MUNDO DE LA MODA.
-          </p>
-        </div>
-      </section>
+      
     </div>
   );
 });

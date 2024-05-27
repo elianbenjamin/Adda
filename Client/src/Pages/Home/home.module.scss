@@ -1,7 +1,7 @@
 @import "../../index.scss";
 
 .Home {
-  @include flex(center, center, column);
+  @include flex(center, stretch, column);
   width: 100%;
   top: 0;
   z-index: -1;

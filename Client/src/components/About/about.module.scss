@@ -20,47 +20,34 @@
     }
   }
 
-  .TheBranchContainer {
-    @include flex(center, stretch);
-    gap: 70px;
-    padding: 50px 0;
-    background-color: #ffeaea;
-    height: calc(100vh - 65px);
+  
+}
 
-    .imageContainer {
-      border: solid black 7px;
-      width: 500px;
-      background-image: url("../../assets/images/aboutImage.jpg");
-      background-size: cover;
-      background-position: center;
-    }
-    .infoContainer {
-      @include flex(center, stretch, column);
-      width: 550px;
-      gap: 30px;
+.titleAnimation {
+  animation: titleAnimation 1.5s;
+}
+.subtitleAnimation {
+  animation: subtitleAnimation 1.5s;
+}
+@keyframes titleAnimation {
+  from {
+    opacity: 0;
+    transform: translateY(-400px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
 
-      .titleContainer {
-        @include flex(center, stretch, column);
-
-        h1 {
-          font-size: 6em;
-          font-family: "Butler";
-          height: 80px;
-          line-height: 1;
-        }
-        h3 {
-          text-align: end;
-          font-size: 2.5em;
-        }
-      }
-
-      p {
-        padding-left: 30%;
-        padding-right: 10px;
-        line-height: 1.5;
-        text-align: right;
-      }
-    }
+@keyframes subtitleAnimation {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
   }
 }
 

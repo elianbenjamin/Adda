@@ -1,0 +1,60 @@
+@import '../../index.scss';
+
+.TheBrand {
+  @include flex(center, stretch);
+  gap: 70px;
+  padding: 50px 0;
+  background-color: $pink;
+  height: calc(100vh - 65px);
+
+  .imageContainer {
+    border: solid black 7px;
+    width: 500px;
+    background-image: url("../../assets/images/aboutImage.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+  .infoContainer {
+    @include flex(center, stretch, column);
+    width: 550px;
+    gap: 30px;
+
+    .titleContainer {
+      @include flex(center, stretch, column);
+
+      h1 {
+        font-size: 6em;
+        font-family: "Butler";
+        height: 80px;
+        line-height: 1;
+      }
+      h3 {
+        text-align: end;
+        font-size: 2.5em;
+        color: $gray;
+      }
+    }
+
+    p {
+      padding-left: 30%;
+      padding-right: 10px;
+      line-height: $line-height;
+      text-align: right;
+    }
+  }
+}
+
+.animation {
+  animation: animation 2s;
+}
+
+@keyframes animation {
+  from {
+    opacity: 0;
+    transform: translateX(-200px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

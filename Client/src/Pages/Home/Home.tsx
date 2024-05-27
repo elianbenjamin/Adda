@@ -2,6 +2,9 @@ import style from "./home.module.scss";
 import About from "../../components/About/About";
 import modelaje from "../../assets/modelaje.mp4";
 import { forwardRef, useImperativeHandle, useRef } from "react";
+import TheBrand from "../../components/TheBrand/TheBrand";
+import Quote from "../../components/Quote/Quote";
+import MisionVisionValues from "../../components/MisionVisionValues/MisionVisionValues";
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const Home = forwardRef((_, ref) => {
@@ -19,6 +22,9 @@ const Home = forwardRef((_, ref) => {
         <video src={modelaje} autoPlay loop muted />
       </div>
       <About ref={ref2} />
+      <TheBrand />
+      <Quote />
+      <MisionVisionValues />
     </div>
   );
 });
