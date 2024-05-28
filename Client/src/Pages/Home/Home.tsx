@@ -6,6 +6,8 @@ import TheBrand from "../../components/TheBrand/TheBrand";
 import Quote from "../../components/Quote/Quote";
 import MisionVisionValues from "../../components/MisionVisionValues/MisionVisionValues";
 import Moodboard from "../../components/Moodboard/Moodboard";
+import Target from "../../components/Target/Target";
+import Catalogue from "../../components/Catalogue/Catalogue";
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const Home = forwardRef((_, ref) => {
@@ -27,6 +29,8 @@ const Home = forwardRef((_, ref) => {
       <Quote />
       <MisionVisionValues />
       <Moodboard />
+      <Target />
+      <Catalogue />
     </div>
   );
 });

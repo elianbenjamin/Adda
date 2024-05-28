@@ -29,6 +29,10 @@
     h1 {
       font-size: 6em;
       font-family: 'Butler';
+      opacity: 0;
+    }
+    .animation {
+      animation: animation 2s forwards;
     }
 
     p {
@@ -36,5 +40,15 @@
       width: 70%;
       font-size: 1.3em;
     }
+  }
+}
+
+@keyframes animation {
+  from {
+    transform: translateY(-200px);
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
   }
 }

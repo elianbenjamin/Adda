@@ -14,7 +14,6 @@ const Quote = () => {
         const leftIconDistance =
           leftIconRef.current.getBoundingClientRect().top;
         if (leftIconDistance <= window.innerHeight) {
-          console.log("si");
           setLeftIconAnimation(true);
           setRightIconAnimation(true);
         }
