@@ -1,8 +1,5 @@
 import { ForwardedRef, forwardRef, useEffect, useRef, useState } from "react";
 import style from "./about.module.scss";
-import img1 from "../../assets/About_img1.jpg";
-import img2 from "../../assets/About_img2.jpg";
-import mainBackground from "../../assets/images/aboutBackground.jpg";
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const About = forwardRef((_, ref: ForwardedRef<HTMLDivElement>) => {

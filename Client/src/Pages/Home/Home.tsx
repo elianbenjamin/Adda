@@ -6,11 +6,16 @@ import TheBrand from "../../components/TheBrand/TheBrand";
 import Quote from "../../components/Quote/Quote";
 import MisionVisionValues from "../../components/MisionVisionValues/MisionVisionValues";
 import { WhatsappIconGreen } from "../../assets/icons";
+import Moodboard from "../../components/Moodboard/Moodboard";
+import Target from "../../components/Target/Target";
+import Catalogue from "../../components/Catalogue/Catalogue";
+import PromotersModelsCourses from "../../components/PromotersModelsCourses/PromotersModelsCourses";
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const Home = forwardRef((_, ref) => {
-
-  const whatsappMessage = encodeURIComponent("¡Hola! Bienvenido a AddaModels, donde los sueños se hacen realidad. ¿Listo para deslumbrar? ¡Hablemos!");
+  const whatsappMessage = encodeURIComponent(
+    "¡Hola! Bienvenido a AddaModels, donde los sueños se hacen realidad. ¿Listo para deslumbrar? ¡Hablemos!"
+  );
 
   const ref1 = useRef(null);
   const ref2 = useRef(null);
@@ -29,15 +34,18 @@ const Home = forwardRef((_, ref) => {
       <TheBrand />
       <Quote />
       <MisionVisionValues />
+      <Moodboard />
+      <Target />
+      <Catalogue />
+      <PromotersModelsCourses />
       <a
         className={style["whatsapp-container"]}
         href={`https://wa.me/3534137494?text=${whatsappMessage}`}
         target="_blank"
       >
-        <WhatsappIconGreen/>
+        <WhatsappIconGreen />
       </a>
     </div>
-    
   );
 });
 

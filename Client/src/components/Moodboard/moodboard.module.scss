@@ -1,21 +1,22 @@
-@import '../index.scss';
+@import '../../index.scss';
 
 .Moodboard {
   @include flex (center, stretch);
   height: calc(100vh - 65px);
   padding: 30px;
   gap: 30px;
-  background-color: $pink;
 
   .ImagesContainer {
     @include flex (center, center);
     width: 45%;
 
-    div {
+    .mainImgContainer {
       @include flex (center, center);
       height: 80%;
       overflow: hidden;
       border: solid black 7px;
+      opacity: 0;
+      box-shadow: $boxShadow;
 
       img {
         max-height: 100%;
@@ -25,16 +26,45 @@
   .infoContainer {
     @include flex (center, center, column);
     width: 65%;
+    margin-bottom: 80px;
 
     h1 {
       font-size: 6em;
       font-family: 'Butler';
+      opacity: 0;
     }
-
+    
     p {
-      line-height: $line-height;
+      line-height: $lineHeight;
       width: 70%;
       font-size: 1.3em;
     }
+  }
+}
+
+.titleAnimation {
+  animation: titleAnimation 2s forwards;
+}
+.imgAnimation {
+  animation: imgAnimation 2s forwards;
+}
+
+@keyframes imgAnimation {
+  from {
+    transform: translateX(-200px);
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes titleAnimation {
+  from {
+    transform: translateY(-200px);
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
   }
 }

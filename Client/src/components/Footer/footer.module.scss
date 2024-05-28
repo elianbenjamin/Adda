@@ -1,52 +1,37 @@
 @import "../../index.scss";
 
 .Footer {
-  @include flex(center, stretch);
-  height: 50vh;
-  max-height: 50vh;
-  background-color: rgb(253, 253, 253);
+  @include flex (center, stretch, column);
+  height: calc(100vh - 65px);
 
+  .imgContainer {
+    @include flex (center, center);
+    height: 70%;
+    overflow: hidden;
 
-  .left {
-    @include flex(center, center);
-    flex: 1;
-  }
-  .mid {
-    @include flex(center, center, column);
-    flex: 1;
-    gap: 15px;
-
-    iframe {
-      height: 70%;
-      width: 70%;
-      border: none;
-      border-radius: 15px;
-      box-shadow: 0px 0px 10px 2px $gray;
-    }
-
-    p {
-      font-weight: bolder;
-      font-size: 1.3em;
+    img {
+      min-width: 100%;
     }
   }
-  .right {
-    @include flex(center, center);
-    flex: 1;
 
-    .content {
-      @include flex(center, flex-start, column);
-      gap: 10px;
+  .content {
+    @include flex (space-evenly, center);
+    height: 30%;
+
+    .titleContainer {
+      @include flex (center, center, column);
+      font-family: 'Butler';
 
       h1 {
-        margin-bottom: 20px;
-        border-bottom: solid $gray 2px;
+        font-size: 4em;
       }
-
-      a {
-        text-decoration: none;
-        color: inherit;
-        border-bottom: solid $gray 1px;
+      h3 {
+        font-size: 1.5em;
       }
+    }
+    .infoContainer {
+      @include flex (center, flex-end, column);
+      gap: 5px;
     }
   }
 }

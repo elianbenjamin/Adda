@@ -13,21 +13,21 @@
     h1 {
       font-family: "Butler";
       font-size: 7em;
+      opacity: 0;
     }
     p {
       font-size: 2.5em;
       background-color: $gray;
+      opacity: 0;
     }
   }
-
-  
 }
 
 .titleAnimation {
-  animation: titleAnimation 1.5s;
+  animation: titleAnimation 2s forwards;
 }
 .subtitleAnimation {
-  animation: subtitleAnimation 1.5s;
+  animation: subtitleAnimation 2s forwards;
 }
 @keyframes titleAnimation {
   from {

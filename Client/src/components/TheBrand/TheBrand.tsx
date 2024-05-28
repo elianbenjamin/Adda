@@ -22,14 +22,14 @@ const TheBrand = () => {
     <div className={style.TheBrand}>
       <div
         className={`${style.imageContainer} ${
-          imageAnimation ? style.animation : ""
+          imageAnimation ? style.imgAnimation : ""
         }`}
         ref={imageRef}
       ></div>
       <div className={style.infoContainer}>
         <div className={style.titleContainer}>
           <h1
-            className={titleAnimation ? style.animation : ""}
+            className={titleAnimation ? style.titleAnimation : ""}
             ref={titleRef}
           >
             LA MARCA

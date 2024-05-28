@@ -1,33 +1,41 @@
-@import '../../index.scss';
+@import "../../index.scss";
 
 .MisionVisionValues {
-  @include flex (space-evenly, center);
+  @include flex(space-evenly, center);
   height: 90vh;
   width: 100%;
-  background-color: $pink;
 
   section {
-    @include flex (space-between, center, column);
+    @include flex(space-between, center, column);
     height: 500px;
     width: 300px;
     margin-bottom: 100px;
 
     h1 {
-      font-family: 'Butler';
+      font-family: "Butler";
       font-size: 4em;
+      opacity: 0;
+    }
+    .titleAnimation {
+      animation: titleAnimation 2s forwards;
     }
 
     .imgContainer {
-      @include flex (center, center);
+      @include flex(center, center);
       height: 200px;
       width: 200px;
       overflow: hidden;
+      border: solid black 5px;
+      box-shadow: $boxShadow;
 
       img {
         max-width: 100%;
       }
     }
 
+    h3 {
+      color: $gray;
+    }
 
     p {
       height: 100px;
@@ -35,5 +43,15 @@
       width: 80%;
       line-height: 1.4;
     }
+  }
+}
+
+@keyframes titleAnimation {
+  from {
+    transform: translateY(-200px);
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
   }
 }
