@@ -4,7 +4,6 @@
   @include flex(space-evenly, center);
   height: 90vh;
   width: 100%;
-  background-color: $pink;
 
   section {
     @include flex(space-between, center, column);

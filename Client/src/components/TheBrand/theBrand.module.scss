@@ -4,7 +4,6 @@
   @include flex(center, stretch);
   gap: 70px;
   padding: 50px 0;
-  background-color: $pink;
   height: calc(100vh - 65px);
 
   .imageContainer {
