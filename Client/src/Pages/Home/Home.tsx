@@ -9,6 +9,9 @@ import { WhatsappIconGreen } from "../../assets/icons";
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const Home = forwardRef((_, ref) => {
+
+  const whatsappMessage = encodeURIComponent("¡Hola! Bienvenido a AddaModels, donde los sueños se hacen realidad. ¿Listo para deslumbrar? ¡Hablemos!");
+
   const ref1 = useRef(null);
   const ref2 = useRef(null);
 
@@ -28,7 +31,7 @@ const Home = forwardRef((_, ref) => {
       <MisionVisionValues />
       <a
         className={style["whatsapp-container"]}
-        href={`https://wa.me/3537562542?text=${WhatsappIconGreen}`}
+        href={`https://wa.me/3534137494?text=${whatsappMessage}`}
         target="_blank"
       >
         <WhatsappIconGreen/>
