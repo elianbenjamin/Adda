@@ -8,6 +8,7 @@ import MisionVisionValues from "../../components/MisionVisionValues/MisionVision
 import Moodboard from "../../components/Moodboard/Moodboard";
 import Target from "../../components/Target/Target";
 import Catalogue from "../../components/Catalogue/Catalogue";
+import PromotersModelsCourses from "../../components/PromotersModelsCourses/PromotersModelsCourses";
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const Home = forwardRef((_, ref) => {
@@ -31,6 +32,7 @@ const Home = forwardRef((_, ref) => {
       <Moodboard />
       <Target />
       <Catalogue />
+      <PromotersModelsCourses />
     </div>
   );
 });

@@ -12,7 +12,8 @@
     width: 420px;
     overflow: hidden;
     border: solid black 5px;
-    box-shadow: 0px 0px 10px 1px;
+    box-shadow: $boxShadow;
+    opacity: 0;
 
     img {
       max-width: 100%;
@@ -23,10 +24,12 @@
     flex: 1;
     height: 100%;
     gap: 30px;
+    margin-bottom: 80px;
 
     h1 {
       font-size: 5em;
       font-family: "Butler";
+      opacity: 0;
     }
 
     .textContainer {
@@ -49,5 +52,31 @@
         }
       }
     }
+  }
+}
+
+.titleAnimation {
+  animation: titleAnimation 2s forwards;
+}
+.imgAnimation {
+  animation: imgAnimation 2s forwards;
+}
+
+@keyframes titleAnimation {
+  from {
+    transform: translateY(-200px);
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes imgAnimation {
+  from {
+    transform: translateX(-200px);
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
   }
 }

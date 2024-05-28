@@ -1,14 +1,31 @@
 import style from "./target.module.scss";
 import img from "../../assets/images/_DSC4556.jpg";
+import { useEffect, useRef, useState } from "react";
 
 const Target = () => {
+  const imgRef = useRef<HTMLDivElement>(null);
+  const [animation, setAnimation] = useState<boolean>(false);
+
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      if (!imgRef.current) return;
+      const distance = imgRef.current.getBoundingClientRect().top;
+      if (distance <= window.innerHeight) setAnimation(true);
+    });
+  }, []);
+
   return (
     <div className={style.Target}>
-      <div className={style.ImgContainer}>
+      <div
+        className={`${style.ImgContainer} ${
+          animation ? style.imgAnimation : ""
+        }`}
+        ref={imgRef}
+      >
         <img src={img} />
       </div>
       <div className={style.InfoContainer}>
-        <h1>PÚBLICO OBJETIVO</h1>
+        <h1 className={animation ? style.titleAnimation : ''}>PÚBLICO OBJETIVO</h1>
 
         <div className={style.textContainer}>
           <section>

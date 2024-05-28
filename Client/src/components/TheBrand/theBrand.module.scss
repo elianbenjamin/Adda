@@ -8,6 +8,7 @@
 
   .imageContainer {
     border: solid black 7px;
+    box-shadow: $boxShadow;
     width: 500px;
     background-image: url("../../assets/images/aboutImage.jpg");
     background-size: cover;
@@ -39,17 +40,20 @@
     p {
       padding-left: 30%;
       padding-right: 10px;
-      line-height: $line-height;
+      line-height: $lineHeight;
       text-align: right;
     }
   }
 }
 
-.animation {
-  animation: animation 2s forwards;
+.titleAnimation {
+  animation: titleAnimation 2s forwards;
+}
+.imgAnimation {
+  animation: imgAnimation 2s forwards;
 }
 
-@keyframes animation {
+@keyframes imgAnimation {
   from {
     opacity: 0;
     transform: translateX(-200px);
@@ -57,5 +61,14 @@
   to {
     opacity: 1;
     transform: translateX(0);
+  }
+}
+@keyframes titleAnimation {
+  from {
+    transform: translateY(-200px);
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
   }
 }
