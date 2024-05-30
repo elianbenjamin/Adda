@@ -38,6 +38,7 @@
       line-height: $lineHeight;
       width: 70%;
       font-size: 1.3em;
+      opacity: 0;
     }
   }
 }
@@ -48,7 +49,18 @@
 .imgAnimation {
   animation: imgAnimation 2s forwards;
 }
+.textAnimation {
+  animation: textAnimation 2s forwards;
+}
 
+@keyframes textAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 @keyframes imgAnimation {
   from {
     transform: translateX(-200px);

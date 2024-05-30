@@ -16,8 +16,11 @@
       font-size: 4em;
       opacity: 0;
     }
-    .titleAnimation {
-      animation: titleAnimation 2s forwards;
+
+    .sectionContent {
+      @include flex (space-evenly, center, column);
+      flex: 1;
+      opacity: 0;
     }
 
     .imgContainer {
@@ -46,6 +49,21 @@
   }
 }
 
+.titleAnimation {
+  animation: titleAnimation 2s forwards;
+}
+.contentAnimation {
+  animation: contentAnimation 2s forwards;
+}
+
+@keyframes contentAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 @keyframes titleAnimation {
   from {
     transform: translateY(-200px);

@@ -11,6 +11,10 @@
     text-align: center;
     position: relative;
 
+    p {
+      opacity: 0
+    }
+
     .leftIconContainer {
       @include flex(center, center);
       right: 105%;
@@ -40,16 +44,27 @@
         width: 100;
       }
     }
-
-    .leftIconAnimation {
-      animation: leftIconAnimation 2s forwards;
-    }
-    .rightIconAnimation {
-      animation: rightIconAnimation 2s forwards;
-    }
   }
 }
 
+.leftIconAnimation {
+  animation: leftIconAnimation 2s forwards;
+}
+.rightIconAnimation {
+  animation: rightIconAnimation 2s forwards;
+}
+.textAnimation { 
+  animation: textAnimation 2s forwards;
+}
+
+@keyframes textAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 @keyframes leftIconAnimation {
   from {
     transform: translateX(-150px);

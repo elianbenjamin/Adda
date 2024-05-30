@@ -1,5 +1,5 @@
 import style from "./home.module.scss";
-import About from "../../components/About/About";
+import Cover from "../../components/Cover/Cover";
 import modelaje from "../../assets/modelaje.mp4";
 import { forwardRef, useImperativeHandle, useRef } from "react";
 import TheBrand from "../../components/TheBrand/TheBrand";
@@ -25,7 +25,7 @@ const Home = forwardRef((_, ref) => {
       <div className={style.videoContainer} ref={ref1}>
         <video src={modelaje} autoPlay loop muted />
       </div>
-      <About ref={ref2} />
+      <Cover ref={ref2} />
       <TheBrand />
       <Quote />
       <MisionVisionValues />

@@ -24,7 +24,7 @@ const Quote = () => {
   return (
     <div className={style.Quote}>
       <div className={style.textContainer}>
-        <p>
+        <p className={leftIconAnimation ? style.textAnimation : ''}>
           PARA ESTILOS DE VIDA DINÁMICOS Y CREATIVOS, "ADDA MODELS" REDEFINE LOS
           CÓDIGOS DE VESTIMENTA, VOLVIENDO A POSICIONAR PIEZAS CLAVES PARA UN
           GUARDARROPAS GENDERLESS, DE UNA FORMA ESTIMULANTE Y CON PERSPECTIVAS

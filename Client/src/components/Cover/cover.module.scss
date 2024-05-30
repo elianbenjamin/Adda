@@ -14,11 +14,14 @@
       font-family: "Butler";
       font-size: 7em;
       opacity: 0;
+      text-wrap: wrap;
+      text-align: center;
     }
     p {
       font-size: 2.5em;
       background-color: $gray;
       opacity: 0;
+      text-align: center;
     }
   }
 }
@@ -39,7 +42,6 @@
     transform: translate(0);
   }
 }
-
 @keyframes subtitleAnimation {
   from {
     opacity: 0;
@@ -51,42 +53,15 @@
   }
 }
 
-// .About {
-//   @include flex (space-between, stretch, column);
-//   background-color: $gray;
-//   height: calc(100vh - 65px);
-//   width: 100vw;
-//   padding: 25px;
-//   border-bottom: solid black 1px;
-//   border-bottom-left-radius: 15px;
-//   border-bottom-right-radius: 15px;
-//   position: relative;
-
-//   section {
-//     @include flex(space-between, center);
-//     background-color: $pink;
-//     padding: 20px;
-//     height: 48%;
-//     gap: 20px;
-//     border-radius: 15px;
-
-//     .imgContainer {
-//       @include flex (center, center);
-//       height: 100%;
-//       box-shadow: 2px 2px 8px black;
-//       border-radius: 10px;
-//       overflow: hidden;
-
-//       img {
-//         height: 100%;
-//       }
-//     }
-
-//     .textContainer {
-//       @include flex(flex-start, center, column);
-//       font-size: 1.2em;
-//       gap: 15px;
-//       flex: 7;
-//     }
-//   }
-// }
+@media screen and (max-width: 1000px) {
+  .About {
+    .MainContainer {
+      h1 {
+        font-size: 5.5em;
+      }
+      p {
+        width: 80%;
+      }
+    }
+  }
+}

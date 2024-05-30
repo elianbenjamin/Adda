@@ -34,16 +34,18 @@ const TheBrand = () => {
           >
             LA MARCA
           </h1>
-          <h3>¿QUIENES SOMOS?</h3>
+          <h3 className={imageAnimation ? style.contentAnimation : ""}>
+            ¿QUIENES SOMOS?
+          </h3>
         </div>
 
-        <p>
+        <p className={imageAnimation ? style.contentAnimation : ""}>
           FUNDADA EN EL 2024, ADDA MODELS ES UNA MARCA QUE SE CARACTERIZA POR SU
           DIVERSIDAD E INCLUSION, ADEMÁS DEL ESTILO IRREVERENTE E ICÓNICO. SU
           PERSONALIDAD REPRESENTA A PERSONAS DE ALMA EFERVESCENTE QUE BUSCAN
           MARCAR LA DIFERENCIA EN SU DÍA A DÍA.
         </p>
-        <p>
+        <p className={imageAnimation ? style.contentAnimation : ""}>
           DETRÁS DE LA MARCA HAY UN EQUIPO DE PROFESIONALES Y CREATIVOS DE
           ESPÍRITU LIBRE, APASIONADOS Y COMPROMETIDOS CON LA CALIDAD Y EL AMOR
           POR LOS DETALLES. VOCACIÓN Y DEDICACIÓN PURA POR TRABAJAR EN EL MUNDO
