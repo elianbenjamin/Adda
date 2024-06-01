@@ -9,6 +9,7 @@ import Moodboard from "../../components/Moodboard/Moodboard";
 import Target from "../../components/Target/Target";
 import Catalogue from "../../components/Catalogue/Catalogue";
 import PromotersModelsCourses from "../../components/PromotersModelsCourses/PromotersModelsCourses";
+import { Route, Routes } from "react-router-dom";
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const Home = forwardRef((_, ref) => {
@@ -25,6 +26,7 @@ const Home = forwardRef((_, ref) => {
       <div className={style.videoContainer} ref={ref1}>
         <video src={modelaje} autoPlay loop muted />
       </div>
+      
       <Cover ref={ref2} />
       <TheBrand />
       <Quote />
