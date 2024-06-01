@@ -19,7 +19,7 @@ const Catalogue = () => {
   }, []);
 
   return (
-    <div className={style.Catalogue}>
+    <div className={style.Catalogue}> 
       <h1 ref={titleRef} className={animation ? style.titleAnimation : ""}>
         CATÁLOGO
       </h1>

@@ -34,6 +34,7 @@
         text-align: end;
         font-size: 2.5em;
         color: $gray;
+        opacity: 0;
       }
     }
 
@@ -42,6 +43,7 @@
       padding-right: 10px;
       line-height: $lineHeight;
       text-align: right;
+      opacity: 0;
     }
   }
 }
@@ -51,6 +53,9 @@
 }
 .imgAnimation {
   animation: imgAnimation 2s forwards;
+}
+.contentAnimation { 
+  animation: contentAnimation 2s forwards;
 }
 
 @keyframes imgAnimation {
@@ -69,6 +74,14 @@
   }
   to {
     transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes contentAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
     opacity: 1;
   }
 }

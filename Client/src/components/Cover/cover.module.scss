@@ -1,0 +1,67 @@
+@import "../../index.scss";
+
+.Cover {
+  @include flex(flex-start, stretch, column);
+  width: 100%;
+
+  .MainContainer {
+    @include flex(center, center, column);
+    height: calc(100vh - 65px);
+    background-image: url("../../assets/images/aboutBackground.jpg");
+    background-size: cover;
+
+    h1 {
+      font-family: "Butler";
+      font-size: 7em;
+      opacity: 0;
+      text-wrap: wrap;
+      text-align: center;
+    }
+    p {
+      font-size: 2.5em;
+      background-color: $gray;
+      opacity: 0;
+      text-align: center;
+    }
+  }
+}
+
+.titleAnimation {
+  animation: titleAnimation 2s forwards;
+}
+.subtitleAnimation {
+  animation: subtitleAnimation 2s forwards;
+}
+@keyframes titleAnimation {
+  from {
+    opacity: 0;
+    transform: translateY(-400px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+@keyframes subtitleAnimation {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .About {
+    .MainContainer {
+      h1 {
+        font-size: 5.5em;
+      }
+      p {
+        width: 80%;
+      }
+    }
+  }
+}

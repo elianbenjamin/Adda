@@ -2,19 +2,12 @@
 
 .PromotersModelsCourses {
   @include flex(center, center, column);
-  height: calc(100vh - 65px);
+  height: 90vh;
   gap: 40px;
 
   .content {
-    @include flex(center, center);
+    @include flex(space-between, center);
     width: 100%;
-    gap: 30px;
-
-    > :nth-child(odd) {
-      div {
-        max-width: 320px;
-      }
-    }
 
     section {
       @include flex(center, center, column);
@@ -30,7 +23,19 @@
         height: 270px;
         overflow: hidden;
         opacity: 0;
+        width: 100%;
       }
+    }
+
+    .section1, .section3 {
+      width: 29.5%;
+
+      div {
+        max-width: 310px;
+      }
+    }
+    .section2 {
+      width: 39%;
     }
   }
 

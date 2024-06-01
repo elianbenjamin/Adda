@@ -19,21 +19,21 @@ const PromotersModelsCourses = () => {
   return (
     <div className={style.PromotersModelsCourses}>
       <div className={style.content}>
-        <section>
+        <section className={style.section1}>
           <h1 className={animation ? style.titleAnimation : ''} ref={titleRef}>Promotores</h1>
           <div className={animation ? style.contentAnimation : ''}>
             <img src={promotersImg} />
           </div>
         </section>
 
-        <section>
+        <section className={style.section2}>
           <h1 className={animation ? style.titleAnimation : ''}>Modelos</h1>
           <div className={animation ? style.contentAnimation : ''}>
             <img src={modelsImg} />
           </div>
         </section>
 
-        <section>
+        <section className={style.section3}>
           <h1 className={animation ? style.titleAnimation : ''}>Cursos</h1>
           <div className={animation ? style.contentAnimation : ''}>
             <img src={coursesImg} />

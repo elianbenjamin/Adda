@@ -29,7 +29,7 @@ const Moodboard = () => {
       </div>
       <div className={style.infoContainer}>
         <h1 className={animation ? style.titleAnimation : ""}>MOODBOARD</h1>
-        <p>
+        <p className={animation ? style.textAnimation : ''}>
           NUESTRO VALOR DIFERENCIAL RADICA EN LA INCLUCION Y LA DIVERSIDAD DE
           ROSTROS, CUERPOS Y GENEROS. INSPIRADOS EN DIVERSOS ESCENARIOS. <br />{" "}
           ASÍ COMO TAMBIÉN LAS TENDENCIAS QUE MARCAN EL RITMO VERTIGINOSO DE LA

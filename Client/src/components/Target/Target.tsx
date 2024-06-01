@@ -27,7 +27,7 @@ const Target = () => {
       <div className={style.InfoContainer}>
         <h1 className={animation ? style.titleAnimation : ''}>PÚBLICO OBJETIVO</h1>
 
-        <div className={style.textContainer}>
+        <div className={`${style.textContainer} ${animation ? style.textAnimation : ''}`}>
           <section>
             <h3>PERSONALIDADES:</h3>
             <p>CREATIVAS. EXPRESIVAS. AVENTURERAS</p>

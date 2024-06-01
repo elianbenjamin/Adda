@@ -1,5 +1,5 @@
 import style from "./home.module.scss";
-import About from "../../components/About/About";
+import Cover from "../../components/Cover/Cover";
 import modelaje from "../../assets/modelaje.mp4";
 import { forwardRef, useImperativeHandle, useRef } from "react";
 import TheBrand from "../../components/TheBrand/TheBrand";
@@ -10,6 +10,7 @@ import Moodboard from "../../components/Moodboard/Moodboard";
 import Target from "../../components/Target/Target";
 import Catalogue from "../../components/Catalogue/Catalogue";
 import PromotersModelsCourses from "../../components/PromotersModelsCourses/PromotersModelsCourses";
+import { Route, Routes } from "react-router-dom";
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const Home = forwardRef((_, ref) => {
@@ -30,7 +31,8 @@ const Home = forwardRef((_, ref) => {
       <div className={style.videoContainer} ref={ref1}>
         <video src={modelaje} autoPlay loop muted />
       </div>
-      <About ref={ref2} />
+      
+      <Cover ref={ref2} />
       <TheBrand />
       <Quote />
       <MisionVisionValues />
