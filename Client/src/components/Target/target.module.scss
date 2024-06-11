@@ -7,7 +7,7 @@
   gap: 25px;
 
   .ImgContainer {
-    @include flex(center, center);
+    @include flex(flex-start, center);
     height: 600px;
     width: 420px;
     overflow: hidden;
@@ -16,7 +16,8 @@
     opacity: 0;
 
     img {
-      max-width: 100%;
+      max-height: 100%;
+      transform: translateX(-15%);
     }
   }
   .InfoContainer {
@@ -28,7 +29,7 @@
 
     h1 {
       font-size: 5em;
-      font-family: "Butler";
+      
       opacity: 0;
     }
 

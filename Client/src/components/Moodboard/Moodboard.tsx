@@ -1,5 +1,5 @@
 import style from "./moodboard.module.scss";
-import img from "../../assets/images/_DSC4502.jpg";
+import img from "../../assets/images/moodboard-img.jpg";
 import { useEffect, useRef, useState } from "react";
 
 const Moodboard = () => {

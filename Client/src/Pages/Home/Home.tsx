@@ -10,7 +10,6 @@ import Moodboard from "../../components/Moodboard/Moodboard";
 import Target from "../../components/Target/Target";
 import Catalogue from "../../components/Catalogue/Catalogue";
 import PromotersModelsCourses from "../../components/PromotersModelsCourses/PromotersModelsCourses";
-import { Route, Routes } from "react-router-dom";
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const Home = forwardRef((_, ref) => {

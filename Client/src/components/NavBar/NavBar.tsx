@@ -1,6 +1,5 @@
 import style from "./navBar.module.scss";
-import logo from "../../assets/logo.jpg";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { HomeIcon } from "../../assets/icons";
 import { useEffect, useState } from "react";
 
@@ -10,7 +9,6 @@ interface Props {
 
 export const NavBar = (props: Props) => {
   const { pathname } = useLocation();
-  const navigate = useNavigate();
   const { scroll } = props;
   const [isScrolled, setIsScrolled] = useState<boolean>(false);
 
@@ -29,27 +27,25 @@ export const NavBar = (props: Props) => {
         isScrolled || pathname !== "/" ? style.navBar_active : ""
       }`}
     >
-      <img src={logo} />
-
       <ul>
         <li
-          className={pathname === "/about" ? style.active : ""}
+          className={pathname === "/" && isScrolled ? style.active : ""}
           onClick={() => {
             setTimeout(() => {
               scroll("bottom");
             }, 0);
           }}
         >
-          <Link to={"/"}>Quienes Somos</Link>
+          <Link to={"/"}>QUIENES SOMOS</Link>
         </li>
         <li className={pathname === "/school" ? style.active : ""}>
-          <Link to="/school">Escuela</Link>
+          <Link to="/school">ESCUELA</Link>
         </li>
         <li className={pathname === "/photos" ? style.active : ""}>
-          <Link to="/photos">Fotos</Link>
+          <Link to="/photos">FOTOS</Link>
         </li>
         <li className={pathname === "/news" ? style.active : ""}>
-          <Link to="/news">Noticias</Link>
+          <Link to="/news">NOTICIAS</Link>
         </li>
       </ul>
 

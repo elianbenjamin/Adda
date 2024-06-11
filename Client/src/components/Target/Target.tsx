@@ -1,5 +1,5 @@
 import style from "./target.module.scss";
-import img from "../../assets/images/_DSC4556.jpg";
+import img from './../../assets/images/targetImg.jpg'
 import { useEffect, useRef, useState } from "react";
 
 const Target = () => {

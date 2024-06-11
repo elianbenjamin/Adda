@@ -1,5 +1,5 @@
 import style from "./photos.module.scss";
-import imagePaths from "../../assets/images";
+import imagePaths from "../../assets/images/gallery-images";
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 
 const Photos = () => {

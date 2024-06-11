@@ -1,13 +1,20 @@
 -buscar video
--seccion la marca: fotos de las dos dueñas
--seccion mision vision y valores agarrar las que pinte
 -cambia foto del footer
 -agregar api de google maps
 
 -escuela:
--carta 1: carrera de modelo profesional con la descripcion de la carrera (msj de wsp) y boton para descargar el pdf "escuela de modelos y promotores".
--carta 2: master class con boton que abra modal
--carta 3: no sabemos
+-carta 1: carrera de modelo profesional con la descripcion de la carrera (msj de wsp) y boton para descargar el pdf "escuela de modelos y promotores". duracion 3 años (1er: formacion integral, 2do: tecnica y modelaje internacional, 3er: perfeccionamiento)
+
+-carta 2: cursos online y presencial. boton de recireccionamiento a wsp desc:
+  -oratoria
+  -protocolo y ceremonial
+  -automaquillaje
+  -promotor de eventos
+  -asesoria de imagen
+  -ingles
+
+-carta 3: servicios de promotres de eventos. boton que redirecciona a wsp. "Me interesa el sercicio de promotres de eventos (staff)". Buscar en chat gpt una descripcion de servicio de promotor
+
 
 -seccion fotos:
 -sacar todas y poner las del ultimo drive

@@ -35,7 +35,7 @@ function App() {
       <NavBar scroll={scroll} />
 
       <Routes>
-        <Route path="/*" element={<Home ref={ref} />} />
+        <Route path="/" element={<Home ref={ref} />} />
         <Route path="/school" element={<School />} />
         <Route path="/photos" element={<Photos />} />
         <Route path="/news" element={<News />} />

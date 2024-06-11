@@ -1,22 +1,80 @@
-@import '../../index.scss';
+@import "../../index.scss";
 
 .School {
-    @include flex (space-between, stretch, column);
-    width: 100vw;
-    height: 100vh;
-    padding: $page-padding;
-    gap: 30px;
+  @include flex(space-between, stretch, column);
+  width: 100vw;
+  height: 100vh;
+  padding: $page-padding;
+  gap: 30px;
+  background-color: $pink;
 
-    .title {
-        @include flex (flex-start, center);
-        height: 70px;
-        border-bottom: solid $gray;
-    }
+  .title {
+    @include flex(flex-start, center);
+    height: 70px;
+    border-bottom: solid $gray;
+  }
 
-    .content {
-        @include flex (space-evenly, center);
-        flex: 1;
-        border-radius: 15px;
-        box-shadow: 0px 0px 20px 5px $gray;
+  .cards {
+    @include flex(space-evenly, center);
+    flex: 1;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px 1px $gray;
+    background-color: white;
+
+    .course1 {
+      @include flex(flex-start, stretch, column);
+      border: solid black 3px;
+      overflow: hidden;
+      width: 300px;
+      box-shadow: $boxShadow;
+
+      h1 {
+        background-color: $gray;
+        text-align: center;
+      }
+
+      .content {
+        @include flex(flex-start, flex-start, column);
+        gap: 20px;
+        padding: 15px;
+        padding-top: 0;
+
+        h3 {
+          background-color: $gray; 
+          padding: 0 10px;
+          align-self: center;
+          border-bottom-left-radius: 10px;
+          border-bottom-right-radius: 10px;
+          color: white;
+        }
+
+        div {
+          @include flex (center, flex-start, column);
+          gap: 10px;
+        }
+
+        a {
+          @include flex(center, center);
+          border: solid $gray;
+          align-self: stretch;
+          position: relative;
+          height: 40px;
+          border-radius: 10px;
+          transition: background-color 0.3s, color 0.3s;
+          cursor: pointer;
+
+          svg {
+            height: 35px;
+            position: absolute;
+            right: 20px;
+          }
+
+          &:hover {
+            background-color: $gray;
+            color: white;
+          }
+        }
+      }
     }
+  }
 }
