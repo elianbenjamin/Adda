@@ -46,7 +46,7 @@
       }
       &::after {
         content: "";
-        background-color: $gray;
+        background-color: $pink;
         height: 100%;
         width: 100%;
         position: absolute;
@@ -61,7 +61,7 @@
       }
     }
     .active {
-      background-color: $gray;
+      background-color: $pink;
       color: black;
     }
   }
@@ -75,7 +75,7 @@
   }
 }
 .navBar_active {
-  background-color: rgba(30, 30, 30, 0.848);  
-  backdrop-filter: blur(10px);
+  background-color: $darkGray;  
   box-shadow: $boxShadow;
+  backdrop-filter: blur(10px);
 }
