@@ -1,6 +1,6 @@
 @import '../../index.scss';
 
-.Career {
+.Promoting {
   @include flex(flex-start, stretch, column);
   overflow: hidden;
   width: 300px;
@@ -49,6 +49,7 @@
 
       p {
         color: $fontWhite;
+        text-align: center;
       }
     }
 

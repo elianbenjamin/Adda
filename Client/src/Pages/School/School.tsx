@@ -1,5 +1,6 @@
 import Career from "../../components/Career/Career";
 import Courses from "../../components/Courses/Courses";
+import Promotion from "../../components/Promotion/Promotion";
 import style from "./school.module.scss";
 
 const School = () => {
@@ -10,7 +11,9 @@ const School = () => {
       <div className={style.cards}>
         <Career />
         
+        <Courses />
 
+        <Promotion />
       </div>
     </div>
   );
