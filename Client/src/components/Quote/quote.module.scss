@@ -3,6 +3,7 @@
 .Quote {
   @include flex(center, center);
   height: 70vh;
+  color: $darkGray;
 
   .textContainer {
     max-width: 600px;

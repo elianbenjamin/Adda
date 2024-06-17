@@ -20,21 +20,21 @@ const PromotersModelsCourses = () => {
     <div className={style.PromotersModelsCourses}>
       <div className={style.content}>
         <section className={style.section1}>
-          <h1 className={animation ? style.titleAnimation : ''} ref={titleRef}>Promotores</h1>
+          <h1 className={animation ? style.titleAnimation : ''} ref={titleRef}>PROMOTORES</h1>
           <div className={animation ? style.contentAnimation : ''}>
             <img src={promotersImg} />
           </div>
         </section>
 
         <section className={style.section2}>
-          <h1 className={animation ? style.titleAnimation : ''}>Modelos</h1>
+          <h1 className={animation ? style.titleAnimation : ''}>MODELAJE</h1>
           <div className={animation ? style.contentAnimation : ''}>
             <img src={modelsImg} />
           </div>
         </section>
 
         <section className={style.section3}>
-          <h1 className={animation ? style.titleAnimation : ''}>Cursos</h1>
+          <h1 className={animation ? style.titleAnimation : ''}>CURSOS</h1>
           <div className={animation ? style.contentAnimation : ''}>
             <img src={coursesImg} />
           </div>

@@ -55,7 +55,7 @@
 
     a {
       @include flex(center, center);
-      border: solid $pink 1px;
+      border: solid $lightBlue 1px;
       align-self: stretch;
       position: relative;
       height: 40px;
@@ -73,7 +73,7 @@
       }
 
       &:hover {
-        background-color: $pink;
+        background-color: $lightBlue;
         color: $darkGray;
       }
     }
