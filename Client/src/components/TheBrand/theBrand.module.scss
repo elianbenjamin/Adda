@@ -25,16 +25,16 @@
 
       h1 {
         font-size: 6em;
-
         height: 80px;
         line-height: 1;
         opacity: 0;
       }
       h3 {
         text-align: end;
+        align-self: flex-end;
         font-size: 2.5em;
-        color: $gray;
         opacity: 0;
+        background-color: $gray;
       }
     }
 

@@ -78,4 +78,9 @@
   background-color: $darkGray;  
   box-shadow: $boxShadow;
   backdrop-filter: blur(10px);
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: $darkGrayHover;
+  }
 }

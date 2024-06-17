@@ -3,6 +3,7 @@
 .Footer {
   @include flex (center, stretch, column);
   height: calc(100vh - 65px);
+  background-color: $pink;
 
   .imgContainer {
     @include flex (center, center);
