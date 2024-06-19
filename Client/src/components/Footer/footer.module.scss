@@ -30,6 +30,13 @@
         font-size: 1.5em;
       }
     }
+
+    iframe {
+      height: 90%;
+      width: 300px;
+      border: none;
+    }
+
     .infoContainer {
       @include flex (center, flex-end, column);
       gap: 5px;
