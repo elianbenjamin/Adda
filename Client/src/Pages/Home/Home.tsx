@@ -5,7 +5,7 @@ import { forwardRef, useImperativeHandle, useRef } from "react";
 import TheBrand from "../../components/TheBrand/TheBrand";
 import Quote from "../../components/Quote/Quote";
 import MisionVisionValues from "../../components/MisionVisionValues/MisionVisionValues";
-import { WhatsappIconGreen } from "../../assets/icons";
+import { WhatsappIconBlack, WhatsappIconGreen } from "../../assets/icons";
 import Moodboard from "../../components/Moodboard/Moodboard";
 import Target from "../../components/Target/Target";
 import Catalogue from "../../components/Catalogue/Catalogue";
@@ -44,7 +44,7 @@ const Home = forwardRef((_, ref) => {
         href={`https://wa.me/3534137494?text=${whatsappMessage}`}
         target="_blank"
       >
-        <WhatsappIconGreen />
+        <WhatsappIconBlack />
       </a>
     </div>
   );

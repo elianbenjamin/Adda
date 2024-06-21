@@ -1,4 +1,9 @@
-import { WhatsappIconBlack, WhatsappIconGreen } from "../../assets/icons";
+import {
+  DownloadIcon,
+  WhatsappIconBlack,
+  WhatsappIconGreen,
+} from "../../assets/icons";
+import pdf from "../../assets/cursos-y-talleres.pdf";
 import style from "./courses.module.scss";
 
 const Courses = () => {
@@ -26,9 +31,9 @@ const Courses = () => {
           </p>
         </div>
 
-        <a>
-          Consultar
-          <WhatsappIconBlack />
+        <a download="CURSOS Y TALLERES" href={pdf}>
+          Ver más...
+          <DownloadIcon />
         </a>
       </div>
     </div>

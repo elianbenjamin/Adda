@@ -1,5 +1,6 @@
-import { WhatsappIconBlack } from "../../assets/icons";
+import { DownloadIcon, WhatsappIconBlack } from "../../assets/icons";
 import style from "./promotion.module.scss";
+import pdf from "../../assets/SERVICIOS-DE-PROMOTOR.pdf";
 
 const Promotion = () => {
   return (
@@ -17,9 +18,9 @@ const Promotion = () => {
           </p>
         </div>
 
-        <a>
-          Consultar
-          <WhatsappIconBlack />
+        <a download="SERVICIOS DE PROMOTOR" href={pdf}>
+          Ver más...
+          <DownloadIcon />
         </a>
       </div>
     </div>

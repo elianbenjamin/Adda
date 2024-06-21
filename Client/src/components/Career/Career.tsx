@@ -1,5 +1,5 @@
 import style from "./career.module.scss";
-import pdf from "../../assets/ESCUELA DE MODELOS Y PROMOTORES.pdf";
+import pdf from "../../assets/ESCUELA-DE-MODELOS-Y-PROMOTORES.pdf";
 import { DownloadIcon } from "../../assets/icons";
 
 const Career = () => {

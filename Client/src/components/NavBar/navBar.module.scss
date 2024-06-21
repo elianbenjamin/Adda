@@ -1,4 +1,4 @@
-@import '../../index.scss';
+@import "../../index.scss";
 
 .navBar {
   @include flex(space-between, center);
@@ -10,9 +10,20 @@
   position: fixed;
   transition: background-color 0.3s;
 
-  img {
-    height: 100%;
-    border-radius: 25px;
+  .logoContainer {
+    @include flex (center, center);
+    background-color: white;
+    height: 50px;
+    width: 50px;
+    overflow: hidden;
+    border-radius: 5px;
+    margin-right: 15px;
+
+    img {
+      height: 100%;
+      width: 100%;
+      transform: scale(2);
+    }
   }
 
   ul {
@@ -24,7 +35,7 @@
     margin-left: 35px;
 
     li {
-      @include flex (center, center);
+      @include flex(center, center);
       position: relative;
       color: aliceblue;
       z-index: 0;
@@ -36,7 +47,7 @@
       padding: 5px;
 
       a {
-        @include flex (center, center);
+        @include flex(center, center);
         text-decoration: none;
         color: inherit;
       }
@@ -75,7 +86,7 @@
   }
 }
 .navBar_active {
-  background-color: $darkGray;  
+  background-color: $darkGray;
   box-shadow: $boxShadow;
   backdrop-filter: blur(10px);
   transition: background-color 0.3s;

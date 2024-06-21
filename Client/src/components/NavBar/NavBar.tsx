@@ -2,6 +2,7 @@ import style from "./navBar.module.scss";
 import { Link, useLocation } from "react-router-dom";
 import { HomeIcon } from "../../assets/icons";
 import { useEffect, useState } from "react";
+import logo from "../../assets/Adda.svg";
 
 interface Props {
   scroll: (target: "top" | "bottom") => void;
@@ -48,14 +49,18 @@ export const NavBar = (props: Props) => {
           <Link to="/news">NOTICIAS</Link>
         </li>
       </ul>
-
+      {/* 
       {(pathname !== "/" || isScrolled) && (
         <HomeIcon
           onClick={() => {
             scroll("top");
           }}
         />
-      )}
+      )} */}
+
+      <div className={style.logoContainer}>
+        <img src={logo} alt="logo"></img>
+      </div>
     </nav>
   );
 };
