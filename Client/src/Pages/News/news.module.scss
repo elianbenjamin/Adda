@@ -3,13 +3,19 @@
 .News {
   height: 100vh;
   padding: $page-padding;
+  background-color: $pink;
 
   .new1 {
     @include flex(flex-start, stretch);
     padding: 20px;
+    border-bottom: solid $darkGray 1px;
 
     .contentContainer {
       width: 50%;
+
+      h1 {
+        font-size: 1.8rem;
+      }
 
       .text {
         font-size: 1.2em;

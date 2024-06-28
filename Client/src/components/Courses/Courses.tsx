@@ -1,9 +1,7 @@
 import {
-  DownloadIcon,
-  WhatsappIconBlack,
-  WhatsappIconGreen,
+  DownloadIcon
 } from "../../assets/icons";
-import pdf from "../../assets/cursos-y-talleres.pdf";
+import pdf from "../../assets/CURSOS-Y-TALLERES.pdf";
 import style from "./courses.module.scss";
 
 const Courses = () => {

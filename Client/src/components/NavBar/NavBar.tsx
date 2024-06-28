@@ -1,8 +1,7 @@
 import style from "./navBar.module.scss";
 import { Link, useLocation } from "react-router-dom";
-import { HomeIcon } from "../../assets/icons";
 import { useEffect, useState } from "react";
-import logo from "../../assets/Adda.svg";
+import logo from "../../assets/adda.svg";
 
 interface Props {
   scroll: (target: "top" | "bottom") => void;

@@ -28,7 +28,7 @@ const Career = () => {
         <p>Marzo a Noviembre. Todos los sabados de 14 a 17hs</p>
 
         <a href={pdf} download="ESCUELA DE MODELOS Y PROMOTORES">
-          Plan de estudio
+          Ver más...
           <DownloadIcon />
         </a>
       </div>
