@@ -2,6 +2,7 @@ import style from "./navBar.module.scss";
 import { Link, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 import logo from "../../assets/adda.svg";
+import { CloseIcon, MenuIcon } from "../../assets/icons";
 
 interface Props {
   scroll: (target: "top" | "bottom") => void;
@@ -11,14 +12,28 @@ export const NavBar = (props: Props) => {
   const { pathname } = useLocation();
   const { scroll } = props;
   const [isScrolled, setIsScrolled] = useState<boolean>(false);
+  const [responsive, setResponsive] = useState<boolean>(false);
+  const [menuOpen, setMenuOpen] = useState<boolean>(false);
 
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 0) setIsScrolled(true);
       else setIsScrolled(false);
     };
+    const handleResize = () => {
+      if (window.innerWidth <= 720) setResponsive(true);
+      else setResponsive(false);
+    };
+
     handleScroll();
+    handleResize();
     window.addEventListener("scroll", handleScroll);
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", handleResize);
+    };
   }, []);
 
   return (
@@ -27,7 +42,18 @@ export const NavBar = (props: Props) => {
         isScrolled || pathname !== "/" ? style.navBar_active : ""
       }`}
     >
-      <ul>
+      {responsive &&
+        (!menuOpen ? (
+          <MenuIcon onClick={() => setMenuOpen(true)} />
+        ) : (
+          <CloseIcon onClick={() => setMenuOpen(false)} />
+        ))}
+
+      <ul
+        className={`${style.buttons} ${
+          responsive ? style.buttonsResponsive : ""
+        } ${menuOpen ? style.buttonsResponsive_open : ""}`}
+      >
         <li
           className={pathname === "/" && isScrolled ? style.active : ""}
           onClick={() => {
@@ -48,14 +74,6 @@ export const NavBar = (props: Props) => {
           <Link to="/news">NOTICIAS</Link>
         </li>
       </ul>
-      {/* 
-      {(pathname !== "/" || isScrolled) && (
-        <HomeIcon
-          onClick={() => {
-            scroll("top");
-          }}
-        />
-      )} */}
 
       <div className={style.logoContainer}>
         <img src={logo} alt="logo"></img>

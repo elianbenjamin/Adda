@@ -54,14 +54,45 @@
 }
 
 @media screen and (max-width: 1000px) {
-  .About {
+  .Cover {
     .MainContainer {
       h1 {
         font-size: 5.5em;
+        max-width: 80%;
       }
       p {
-        width: 80%;
+        max-width: 80%;
       }
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .Cover {
+    .MainContainer {
+      h1 {
+        max-width: 90%;
+        font-size: 5rem;
+      }
+      p {
+        max-width: 90%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .Cover {
+    .MainContainer {
+      h1 {
+        max-width: 95%;
+        font-size: 4rem;
+      }
+      p {
+        max-width: 95%;
+        font-size: 2rem;
+      }
+
     }
   }
 }

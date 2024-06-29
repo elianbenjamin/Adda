@@ -3,11 +3,12 @@
 .Footer {
   @include flex (center, stretch, column);
   height: calc(100vh - 65px);
-  background-color: $pink;
+  background-color: white;
+  height: 70vh;
 
   .imgContainer {
     @include flex (center, center);
-    height: 70%;
+    height: 60%;
     overflow: hidden;
 
     img {
@@ -17,7 +18,7 @@
 
   .content {
     @include flex (space-evenly, center);
-    height: 30%;
+    height: 40%;
 
     .titleContainer {
       @include flex (center, center, column);
