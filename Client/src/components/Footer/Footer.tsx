@@ -1,5 +1,5 @@
 import style from "./footer.module.scss";
-import footerImg from "../../assets/images/footer-img.png";
+import footerImg from "../../assets/images/footer-img.jpg";
 
 const Footer = () => {
   return (

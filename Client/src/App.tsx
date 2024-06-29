@@ -4,7 +4,7 @@ import NavBar from "./components/NavBar/NavBar";
 
 import Home from "./Pages/Home/Home";
 import School from "./Pages/School/School";
-import Photos from "./Pages/Photos/Photos";
+import Photos from "./Pages/Gallery/Gallery";
 import { RefObject, useEffect, useRef } from "react";
 import Footer from "./components/Footer/Footer";
 import News from "./Pages/News/News";

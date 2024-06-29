@@ -6,11 +6,11 @@ import style from "./school.module.scss";
 const School = () => {
   return (
     <div className={style.School}>
-      <h1 className={style.title}>Cursos disponibles:</h1>
+      <h1 className={style.title}>CURSOS DISPONIBLES:</h1>
 
       <div className={style.cards}>
         <Career />
-        
+
         <Courses />
 
         <Promotion />

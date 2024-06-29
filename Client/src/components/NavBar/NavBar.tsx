@@ -75,8 +75,14 @@ export const NavBar = (props: Props) => {
         </li>
       </ul>
 
-      <div className={style.logoContainer}>
-        <img src={logo} alt="logo"></img>
+      <div
+        className={style.titleContainer}
+      >
+        <h3>ADDA MODELS</h3>
+
+        <div className={style.logoContainer}>
+          <img src={logo} alt="logo"></img>
+        </div>
       </div>
     </nav>
   );

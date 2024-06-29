@@ -3,25 +3,53 @@
 .News {
   height: 100vh;
   padding: $page-padding;
-  background-color: $pink;
+  background-color: $white;
 
   .new1 {
     @include flex(flex-start, stretch);
     padding: 20px;
-    border-bottom: solid $darkGray 1px;
+    gap: 20px;
 
     .contentContainer {
+      @include flex(flex-start, flex-start, column);
       width: 50%;
 
       h1 {
-        font-size: 1.8rem;
+        font-size: 3rem;
+        text-wrap: nowrap;
+      }
+
+      .dateAndUbi {
+        @include flex (space-between, center);
+        align-self: stretch;
+        margin-top: 10px;
+        border-top: solid $darkGray 1px;
+        border-bottom: solid $darkGray 1px;
+
+        svg {
+          height: 35px;
+          width: 35px;
+        }
+
+        .dateContainer {
+          @include flex(flex-start, center);
+          gap: 20px;
+          padding: 10px 0;
+
+          p {
+            font-size: 1.5rem;
+          }
+        }
+
+        .ubiContainer {
+          @include flex (space-between, center);
+          padding: 10px 0;
+        }
       }
 
       .text {
-        font-size: 1.2em;
+        font-size: 1.4rem;
         margin-top: 15px;
-        padding-right: 30px;
-        // text-align: justify;
       }
     }
 
@@ -31,6 +59,7 @@
 
       img {
         max-width: 100%;
+        box-shadow: $boxShadow;
       }
     }
   }
