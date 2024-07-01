@@ -1,6 +1,6 @@
 import Career from "../../components/Career/Career";
 import Courses from "../../components/Courses/Courses";
-import Promotion from "../../components/Promotion/Promotion";
+import Services from "../../components/Services/Services";
 import style from "./school.module.scss";
 
 const School = () => {
@@ -13,7 +13,7 @@ const School = () => {
 
         <Courses />
 
-        <Promotion />
+        <Services />
       </div>
     </div>
   );

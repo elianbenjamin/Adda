@@ -1,4 +1,4 @@
-@import '../../index.scss';
+@import "../../index.scss";
 
 .Promoting {
   @include flex(flex-start, stretch, column);
@@ -6,32 +6,27 @@
   width: 300px;
   transition: background-color 0.3s;
   border-radius: 5px;
-  background-color: $darkGray;
   color: $white;
 
   .title {
     @include flex(center, center);
     width: 100%;
-    background-color: $white;
     text-align: center;
     height: 35px;
-    color: black;
+    color: $white;
     font-weight: 700;
+    background-color: $darkGray;
   }
 
   .content {
     @include flex(space-between, flex-start, column);
     height: 400px;
     padding: 15px;
-    border: solid rgb(255, 255, 255) 1px;
+    border: solid $darkGray 1px;
     border-bottom-left-radius: inherit;
     border-bottom-right-radius: inherit;
     transition: background-color 0.3s;
-
-
-    &:hover {
-      background-color: $darkGrayHover;
-    }
+    color: $darkGray;
 
     .contentTitle {
       padding: 0 10px;
@@ -48,23 +43,21 @@
       gap: 10px;
 
       p {
-        color: $fontWhite;
         text-align: center;
       }
     }
 
     a {
       @include flex(center, center);
-      border: solid $lightBlue 1px;
+      border: solid $darkGray 1px;
       align-self: stretch;
       position: relative;
       height: 40px;
       border-radius: 5px;
       cursor: pointer;
-      color: inherit;
       text-decoration: none;
       transition: background-color 0.3s, color 0.3s;
-      color: $fontWhite;
+      color: inherit;
 
       svg {
         height: 30px;
@@ -73,8 +66,8 @@
       }
 
       &:hover {
-        background-color: $lightBlue;
-        color: $darkGray;
+        background-color: $darkGray;
+        color: $white;
       }
     }
   }

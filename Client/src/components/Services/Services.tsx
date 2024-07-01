@@ -1,8 +1,8 @@
-import { DownloadIcon, WhatsappIconBlack } from "../../assets/icons";
-import style from "./promotion.module.scss";
+import { DownloadIcon } from "../../assets/icons";
+import style from "./services.module.scss";
 import pdf from "../../assets/SERVICIOS-DE-PROMOTOR.pdf";
 
-const Promotion = () => {
+const Services = () => {
   return (
     <div className={style.Promoting}>
       <h3 className={style.title}>SERVICIOS</h3>
@@ -27,4 +27,4 @@ const Promotion = () => {
   );
 };
 
-export default Promotion;
+export default Services;
