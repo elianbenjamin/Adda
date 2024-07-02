@@ -23,30 +23,31 @@ const Quote = () => {
 
   return (
     <div className={style.Quote}>
+      <div
+        className={`${style.leftIconContainer} ${
+          leftIconAnimation ? style.leftIconAnimation : ""
+        }`}
+        ref={leftIconRef}
+      >
+        <QuoteIcon />
+      </div>
+      
       <div className={style.textContainer}>
-        <p className={leftIconAnimation ? style.textAnimation : ''}>
+        <p className={leftIconAnimation ? style.textAnimation : ""}>
           PARA ESTILOS DE VIDA DINÁMICOS Y CREATIVOS, "ADDA MODELS" REDEFINE LOS
           CÓDIGOS DE VESTIMENTA, VOLVIENDO A POSICIONAR PIEZAS CLAVES PARA UN
           GUARDARROPAS GENDERLESS, DE UNA FORMA ESTIMULANTE Y CON PERSPECTIVAS
           DE EXPANSIÓN INTERNACIONAL.
         </p>
+      </div>
 
-        <div
-          className={`${style.leftIconContainer} ${
-            leftIconAnimation ? style.leftIconAnimation : ""
-          }`}
-          ref={leftIconRef}
-        >
-          <QuoteIcon />
-        </div>
-        <div
-          className={`${style.rightIconContainer} ${
-            rightIconAnimation ? style.rightIconAnimation : ""
-          }`}
-          ref={rightIconRef}
-        >
-          <QuoteIcon />
-        </div>
+      <div
+        className={`${style.rightIconContainer} ${
+          rightIconAnimation ? style.rightIconAnimation : ""
+        }`}
+        ref={rightIconRef}
+      >
+        <QuoteIcon />
       </div>
     </div>
   );

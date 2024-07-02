@@ -33,8 +33,8 @@ const Home = forwardRef((_, ref) => {
       
       <Cover ref={ref2} />
       <TheBrand />
-      {/* <Quote />
-      <MisionVisionValues />
+      <Quote />
+      {/* <MisionVisionValues />
       <Moodboard />
       <Target />
       <Catalogue />
