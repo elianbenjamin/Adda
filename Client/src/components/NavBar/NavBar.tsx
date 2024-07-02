@@ -21,7 +21,7 @@ export const NavBar = (props: Props) => {
       else setIsScrolled(false);
     };
     const handleResize = () => {
-      if (window.innerWidth <= 720) setResponsive(true);
+      if (window.innerWidth <= 750) setResponsive(true);
       else setResponsive(false);
     };
 
@@ -38,7 +38,7 @@ export const NavBar = (props: Props) => {
 
   return (
     <nav
-      className={`${style.navBar} ${
+      className={`${style.NavBar} ${
         isScrolled || pathname !== "/" ? style.navBar_active : ""
       }`}
     >
@@ -78,7 +78,7 @@ export const NavBar = (props: Props) => {
       <div
         className={style.titleContainer}
       >
-        <h3>ADDA MODELS ®</h3>
+        <h3>ADDA MODELS</h3>
 
         <div className={style.logoContainer}>
           <img src={logo} alt="logo"></img>

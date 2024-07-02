@@ -1,12 +1,13 @@
 @import "../../index.scss";
 
-.navBar {
+.NavBar {
   @include flex(space-between, center);
   height: 65px;
   width: 100%;
   background-color: transparent;
   z-index: 10;
   padding: 10px;
+  padding-left: 35px;
   position: fixed;
   transition: background-color 0.3s;
   user-select: none;
@@ -16,7 +17,6 @@
     list-style-type: none;
     flex: 1;
     gap: 40px;
-    margin-left: 35px;
 
     li {
       @include flex(center, center);
@@ -126,5 +126,19 @@
 
   &:hover {
     background-color: $darkGrayHover;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .NavBar {
+    padding-left: 15px;
+
+    .titleContainer {
+      gap: 5px;
+    }
+
+    .buttons {
+      gap: 13px;
+    }
   }
 }

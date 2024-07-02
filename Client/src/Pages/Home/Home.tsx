@@ -33,12 +33,12 @@ const Home = forwardRef((_, ref) => {
       
       <Cover ref={ref2} />
       <TheBrand />
-      <Quote />
+      {/* <Quote />
       <MisionVisionValues />
       <Moodboard />
       <Target />
       <Catalogue />
-      <PromotersModelsCourses />
+      <PromotersModelsCourses /> */}
       <a
         className={style["whatsapp-container"]}
         href={`https://wa.me/3534137494?text=${whatsappMessage}`}

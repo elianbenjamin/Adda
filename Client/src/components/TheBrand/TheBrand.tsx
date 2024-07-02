@@ -6,6 +6,7 @@ const TheBrand = () => {
   const titleRef = useRef<HTMLDivElement>(null);
   const [imageAnimation, setImageAnimation] = useState<boolean>(false);
   const [titleAnimation, setTitleAnimation] = useState<boolean>(false);
+  const [responsive, setResponsive] = useState<boolean>(false);
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
@@ -16,28 +17,39 @@ const TheBrand = () => {
         if (titleDistance <= window.innerHeight) setTitleAnimation(true);
       }
     });
+    const handleResize = () => {
+      if (window.innerWidth <= 890) setResponsive(true);
+      else setResponsive(false);
+    }
+    handleResize();
+    window.addEventListener('resize', handleResize);
   }, []);
+
+  const titleContainer = (
+    <div className={style.titleContainer}>
+      <h1 className={titleAnimation ? style.titleAnimation : ""} ref={titleRef}>
+        LA MARCA
+      </h1>
+      <h3 className={imageAnimation ? style.contentAnimation : ""}>
+        ¿QUIENES SOMOS?
+      </h3>
+    </div>
+  );
 
   return (
     <div className={style.TheBrand}>
-      <div
-        className={`${style.imageContainer} ${
-          imageAnimation ? style.imgAnimation : ""
-        }`}
-        ref={imageRef}
-      ></div>
-      <div className={style.infoContainer}>
-        <div className={style.titleContainer}>
-          <h1
-            className={titleAnimation ? style.titleAnimation : ""}
-            ref={titleRef}
-          >
-            LA MARCA
-          </h1>
-          <h3 className={imageAnimation ? style.contentAnimation : ""}>
-            ¿QUIENES SOMOS?
-          </h3>
-        </div>
+      <section className={style.imgContainer}>
+        {responsive && titleContainer}
+
+        <div
+          className={`${style["imgContainer-main"]} ${
+            imageAnimation ? style.imgAnimation : ""
+          }`}
+          ref={imageRef}
+        ></div>
+      </section>
+      <section className={style.infoContainer}>
+        {!responsive && titleContainer}
 
         <p className={imageAnimation ? style.contentAnimation : ""}>
           FUNDADA EN EL 2024, ADDA MODELS ES UNA MARCA QUE SE CARACTERIZA POR SU
@@ -51,7 +63,7 @@ const TheBrand = () => {
           POR LOS DETALLES. VOCACIÓN Y DEDICACIÓN PURA POR TRABAJAR EN EL MUNDO
           DE LA MODA.
         </p>
-      </div>
+      </section>
     </div>
   );
 };
