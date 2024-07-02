@@ -17,24 +17,25 @@ const Moodboard = () => {
 
   return (
     <div className={style.Moodboard}>
-      <div className={style.ImagesContainer}>
+      <h1 className={animation ? style.titleAnimation : ""}>MOODBOARD</h1>
+      <div className={style.contentContainer}>
         <div
-          className={`${style.mainImgContainer} ${
+          className={`${style.imgContainer} ${
             animation ? style.imgAnimation : ""
           }`}
           ref={imgRef}
         >
           <img src={img} />
         </div>
-      </div>
-      <div className={style.infoContainer}>
-        <h1 className={animation ? style.titleAnimation : ""}>MOODBOARD</h1>
-        <p className={animation ? style.textAnimation : ''}>
-          NUESTRO VALOR DIFERENCIAL RADICA EN LA INCLUCION Y LA DIVERSIDAD DE
-          ROSTROS, CUERPOS Y GENEROS. INSPIRADOS EN DIVERSOS ESCENARIOS. <br />{" "}
-          ASÍ COMO TAMBIÉN LAS TENDENCIAS QUE MARCAN EL RITMO VERTIGINOSO DE LA
-          MODA.
-        </p>
+
+        <div className={style.infoContainer}>
+          <p className={animation ? style.textAnimation : ""}>
+            NUESTRO VALOR DIFERENCIAL RADICA EN LA INCLUCION Y LA DIVERSIDAD DE
+            ROSTROS, CUERPOS Y GENEROS. INSPIRADOS EN DIVERSOS ESCENARIOS.{" "}
+            <br /> ASÍ COMO TAMBIÉN LAS TENDENCIAS QUE MARCAN EL RITMO
+            VERTIGINOSO DE LA MODA.
+          </p>
+        </div>
       </div>
     </div>
   );
