@@ -3,6 +3,7 @@
 .Moodboard {
   @include flex(center, center, column);
   min-height: calc(100vh - 65px);
+  gap: 20px;
 
   h1 {
     font-size: 5em;
@@ -96,6 +97,14 @@
 @media screen and (max-width: 840px) {
   .Moodboard {
     padding: 40px 20px;
+
+    .contentContainer {
+      justify-content: space-between;
+
+      .imgContainer {
+        min-width: 300px;
+      }
+    }
   }
 }
 
@@ -118,7 +127,7 @@
 
       .infoContainer {
         width: 100%;
-        font-size: 1em;
+        font-size: 1.1em;
 
         p {
           width: 100%;
@@ -147,6 +156,8 @@
 
     .contentContainer {
       .imgContainer {
+        min-width: auto;
+
         img {
           transform: scale(1.01);
         }
