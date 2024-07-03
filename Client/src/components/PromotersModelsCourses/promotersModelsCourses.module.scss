@@ -13,7 +13,8 @@
       @include flex(center, center, column);
 
       h1 {
-        background-color: $lightBlue;
+        background-color: $darkGray;
+        color: $white;
         font-size: 2em;
         opacity: 0;
       }

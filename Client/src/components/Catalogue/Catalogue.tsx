@@ -19,10 +19,11 @@ const Catalogue = () => {
   }, []);
 
   return (
-    <div className={style.Catalogue}> 
+    <div className={style.Catalogue}>
       <h1 ref={titleRef} className={animation ? style.titleAnimation : ""}>
         CATÁLOGO
       </h1>
+
       <div
         className={`${style.cards} ${animation ? style.cardsAnimation : ""}`}
       >
@@ -32,24 +33,28 @@ const Catalogue = () => {
           </div>
           <p>TOBIAS SALOMON</p>
         </section>
+
         <section>
           <div>
             <img src={michelBioleImg} />
           </div>
           <p>MICHEL BIOLE</p>
         </section>
+
         <section>
           <div>
             <img src={lucasGutierrezImg} />
           </div>
           <p>LUCAS GUTIERREZ</p>
         </section>
+
         <section>
           <div>
             <img src={araceliYLudmilaNicolettiImg} />
           </div>
           <p>ARACELY Y LUDMILA NICOLETTI</p>
         </section>
+
         <section>
           <div>
             <img src={camilaRodriguezImg} />

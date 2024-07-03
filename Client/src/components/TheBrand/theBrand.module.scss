@@ -41,7 +41,8 @@
         align-self: flex-end;
         font-size: 2.5em;
         opacity: 0;
-        background-color: $lightBlue;
+        background-color: $darkGray;
+        color: $white;
       }
     }
 
@@ -157,7 +158,8 @@
           align-self: flex-end;
           font-size: 2.5em;
           opacity: 0;
-          background-color: $lightBlue;
+          background-color: $darkGray;
+          color: $white;
         }
       }
     }

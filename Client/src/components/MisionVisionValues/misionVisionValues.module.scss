@@ -44,7 +44,8 @@
 
     h3 {
       font-weight: 600;
-      background-color: $lightBlue;
+      background-color: $darkGray;
+      color: $white;
     }
 
     p {
@@ -84,7 +85,7 @@
   .MisionVisionValues {
     section {
       h1 {
-        font-size: 3em;
+        font-size: 2em;
       }
     }
   }
@@ -118,6 +119,8 @@
 
 @media screen and (max-width: 550px) {
   .MisionVisionValues {
+    
+
     section{
       .sectionContent {
         p {

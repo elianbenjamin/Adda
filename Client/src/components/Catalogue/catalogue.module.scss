@@ -2,7 +2,7 @@
 
 .Catalogue {
   @include flex(center, center, column);
-  height: 90vh;
+  min-height: 90vh;
   padding: 25px;
   gap: 30px;
 
@@ -16,6 +16,8 @@
     width: 100%;
     max-width: 1300px;
     opacity: 0;
+    flex-wrap: wrap;
+    gap: 15px;
 
     section {
       @include flex (flex-start, center, column);
@@ -70,3 +72,28 @@
   }
 }
 
+@media screen and (max-width: 550px) {
+  .Catalogue {
+    padding-top: 40px;
+
+    h1 {
+      font-size: 5em;
+    }
+  }
+}
+
+@media screen and (max-width: 470px) {
+  .Catalogue {
+    h1 {
+      font-size: 4em;
+    }
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .Catalogue {
+    h1 {
+      font-size: 3em;
+    }
+  }
+}

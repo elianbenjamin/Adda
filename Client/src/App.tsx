@@ -6,6 +6,7 @@ import School from "./Pages/School/School";
 import Photos from "./Pages/Gallery/Gallery";
 import { RefObject, useEffect, useRef } from "react";
 import News from "./Pages/News/News";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   const { pathname } = useLocation();
@@ -39,7 +40,7 @@ function App() {
         <Route path="/news" element={<News />} />
       </Routes>
 
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 }
