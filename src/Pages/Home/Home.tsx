@@ -5,11 +5,10 @@ import { forwardRef, useImperativeHandle, useRef } from "react";
 import TheBrand from "../../components/TheBrand/TheBrand";
 import Quote from "../../components/Quote/Quote";
 import MisionVisionValues from "../../components/MisionVisionValues/MisionVisionValues";
-import { WhatsappIconBlack, WhatsappIconGreen } from "../../assets/icons";
 import Moodboard from "../../components/Moodboard/Moodboard";
 import Target from "../../components/Target/Target";
 import Catalogue from "../../components/Catalogue/Catalogue";
-import PromotersModelsCourses from "../../components/PromotersModelsCourses/PromotersModelsCourses";
+import { WhatsappIconBlack } from "../../assets/icons";
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const Home = forwardRef((_, ref) => {
