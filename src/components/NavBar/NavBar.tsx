@@ -37,7 +37,11 @@ export const NavBar = (props: Props) => {
   }, []);
 
   return (
-    <nav className={`${style.NavBar} ${isScrolled || pathname !== '/' ? style.navBar_active : ""}`}>
+    <nav
+      className={`${style.NavBar} ${
+        isScrolled || pathname !== "/" ? style.navBar_active : ""
+      }`}
+    >
       {responsive &&
         (!menuOpen ? (
           <MenuIcon onClick={() => setMenuOpen(true)} />
@@ -48,9 +52,11 @@ export const NavBar = (props: Props) => {
       <ul
         className={`${style.buttons} ${
           responsive ? style.buttonsResponsive : ""
-        } ${isScrolled && responsive ? style.navBar_active : ""} ${
-          menuOpen ? style.buttonsResponsive_open : ""
-        }`}
+        } ${
+          responsive && (isScrolled || pathname !== "/")
+            ? style.navBar_active
+            : ""
+        } ${menuOpen ? style.buttonsResponsive_open : ""}`}
       >
         <li
           className={pathname === "/" && isScrolled ? style.active : ""}
@@ -58,17 +64,27 @@ export const NavBar = (props: Props) => {
             setTimeout(() => {
               scroll("bottom");
             }, 0);
+            setMenuOpen(false);
           }}
         >
           <Link to={"/"}>QUIENES SOMOS</Link>
         </li>
-        <li className={pathname === "/school" ? style.active : ""}>
+        <li
+          className={pathname === "/school" ? style.active : ""}
+          onClick={() => setMenuOpen(false)}
+        >
           <Link to="/school">ESCUELA</Link>
         </li>
-        <li className={pathname === "/photos" ? style.active : ""}>
+        <li
+          className={pathname === "/photos" ? style.active : ""}
+          onClick={() => setMenuOpen(false)}
+        >
           <Link to="/photos">FOTOS</Link>
         </li>
-        <li className={pathname === "/news" ? style.active : ""}>
+        <li
+          className={pathname === "/news" ? style.active : ""}
+          onClick={() => setMenuOpen(false)}
+        >
           <Link to="/news">NOTICIAS</Link>
         </li>
       </ul>
