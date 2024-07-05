@@ -17,6 +17,11 @@
     color: $white;
     font-weight: 700;
     background-color: $darkGray;
+    transition: background-color 0.3s;
+  }
+
+  &:hover .title {
+    background-color: $darkGrayHover;
   }
 
   .content {
@@ -57,8 +62,9 @@
       border-radius: 5px;
       cursor: pointer;
       text-decoration: none;
+      color: $white;
+      background-color: $darkGray;
       transition: background-color 0.3s, color 0.3s;
-      color: inherit;
 
       svg {
         height: 30px;
@@ -67,8 +73,7 @@
       }
 
       &:hover {
-        background-color: $darkGray;
-        color: $white;
+        background-color: $darkGrayHover;
       }
     }
   }

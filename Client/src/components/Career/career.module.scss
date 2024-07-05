@@ -4,10 +4,10 @@
   @include flex(flex-start, stretch, column);
   overflow: hidden;
   width: 300px;
-  transition: background-color 0.3s;
   border-radius: 5px;
   color: $white;
   box-shadow: $boxShadow $darkGray;
+  transition: background-color 0.3s;
 
   .title {
     @include flex(center, center);
@@ -17,6 +17,11 @@
     height: 35px;
     color: $white;
     font-weight: 700;
+    transition: background-color 0.3s;
+  }
+
+  &:hover .title {
+    background-color: $darkGrayHover;
   }
 
   .content {
@@ -58,7 +63,8 @@
       cursor: pointer;
       text-decoration: none;
       transition: background-color 0.3s, color 0.3s;
-      color: $darkGray;
+      color: $white;
+      background-color: $darkGray;
 
       svg {
         height: 30px;
@@ -67,8 +73,7 @@
       }
 
       &:hover {
-        color: $white;
-        background-color: $darkGray;
+        background-color: $darkGrayHover;
       }
     }
   }
