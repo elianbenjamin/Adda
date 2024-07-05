@@ -63,25 +63,21 @@
 
   .buttonsResponsive {
     flex-direction: column;
-    gap: 15px;
+    justify-content: flex-start;
+    gap: 40px;
     position: absolute;
     top: 99%;
-    left: 0;
+    left: -200px;
     margin: 0;
     align-items: flex-start;
     padding: 20px;
-    background-color: $darkGray;
     border-bottom-right-radius: 10px;
-    transform: translateX(-101%);
+    border-top-right-radius: 10px;
     transition: transform 0.3s, background-color 0.3s;
-
-    &:hover {
-      background-color: $darkGrayHover;
-    }
   }
 
   .buttonsResponsive_open {
-    transform: translateX(0);
+    transform: translateX(200px);
   }
 
   svg {
@@ -140,5 +136,9 @@
     .buttons {
       gap: 13px;
     }
+    .buttonsResponsive {
+      gap: 40px;
+    }
+    
   }
 }

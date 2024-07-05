@@ -37,11 +37,7 @@ export const NavBar = (props: Props) => {
   }, []);
 
   return (
-    <nav
-      className={`${style.NavBar} ${
-        isScrolled || pathname !== "/" ? style.navBar_active : ""
-      }`}
-    >
+    <nav className={`${style.NavBar} ${isScrolled ? style.navBar_active : ""}`}>
       {responsive &&
         (!menuOpen ? (
           <MenuIcon onClick={() => setMenuOpen(true)} />
@@ -52,7 +48,9 @@ export const NavBar = (props: Props) => {
       <ul
         className={`${style.buttons} ${
           responsive ? style.buttonsResponsive : ""
-        } ${menuOpen ? style.buttonsResponsive_open : ""}`}
+        } ${isScrolled ? style.navBar_active : ""} ${
+          menuOpen ? style.buttonsResponsive_open : ""
+        }`}
       >
         <li
           className={pathname === "/" && isScrolled ? style.active : ""}
@@ -75,9 +73,7 @@ export const NavBar = (props: Props) => {
         </li>
       </ul>
 
-      <div
-        className={style.titleContainer}
-      >
+      <div className={style.titleContainer}>
         <h3>ADDA MODELS</h3>
 
         <div className={style.logoContainer}>

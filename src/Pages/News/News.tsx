@@ -8,13 +8,6 @@ const News = () => {
       <article>
         <h1> !LA BODEGA EN PASARELA! </h1>
 
-        {/* <h3>
-          | Evento | <CalendarIcon /> 4 de Agosto | <MapMarkerIcon />
-          <a href="https://maps.app.goo.gl/ybqCBk9bYVFAgCUm8">
-            La bodega, Villa Nueva
-          </a>
-        </h3> */}
-
         <div className={style.dataContainer}>
           <h3>
             <CalendarIcon /> 4 de Agosto{" "}
@@ -22,7 +15,7 @@ const News = () => {
           <p>|</p>
           <h3>
             <MapMarkerIcon />
-            <a href="https://maps.app.goo.gl/ybqCBk9bYVFAgCUm8" target="_blank">
+            <a href="https://maps.app.goo.gl/coZdCwMaGVprMT3r5" target="_blank">
               La bodega, Villa Nueva
             </a>
           </h3>
