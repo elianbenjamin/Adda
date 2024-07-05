@@ -37,7 +37,7 @@ export const NavBar = (props: Props) => {
   }, []);
 
   return (
-    <nav className={`${style.NavBar} ${isScrolled ? style.navBar_active : ""}`}>
+    <nav className={`${style.NavBar} ${isScrolled || pathname !== '/' ? style.navBar_active : ""}`}>
       {responsive &&
         (!menuOpen ? (
           <MenuIcon onClick={() => setMenuOpen(true)} />
@@ -48,7 +48,7 @@ export const NavBar = (props: Props) => {
       <ul
         className={`${style.buttons} ${
           responsive ? style.buttonsResponsive : ""
-        } ${isScrolled ? style.navBar_active : ""} ${
+        } ${isScrolled && responsive ? style.navBar_active : ""} ${
           menuOpen ? style.buttonsResponsive_open : ""
         }`}
       >
