@@ -73,7 +73,14 @@ export const NavBar = (props: Props) => {
         </li>
       </ul>
 
-      <div className={style.titleContainer}>
+      <div
+        className={style.titleContainer}
+        onClick={() => {
+          setTimeout(() => {
+            scroll("top");
+          }, 0);
+        }}
+      >
         <h3>ADDA MODELS</h3>
 
         <div className={style.logoContainer}>

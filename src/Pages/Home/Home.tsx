@@ -8,13 +8,22 @@ import MisionVisionValues from "../../components/MisionVisionValues/MisionVision
 import Moodboard from "../../components/Moodboard/Moodboard";
 import Target from "../../components/Target/Target";
 import Catalogue from "../../components/Catalogue/Catalogue";
-import { WhatsappIconBlack } from "../../assets/icons";
+import {
+  ArrowDown,
+  ArrowDownCircle,
+  WhatsappIconBlack,
+} from "../../assets/icons";
+
+interface Props {
+  scroll: (target: "top" | "bottom") => void;
+}
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-const Home = forwardRef((_, ref) => {
+const Home = forwardRef((props: Props, ref) => {
   const whatsappMessage = encodeURIComponent(
     "¡Hola! Bienvenido a AddaModels, donde los sueños se hacen realidad. ¿Listo para deslumbrar? ¡Hablemos!"
   );
+  const { scroll } = props;
 
   const ref1 = useRef(null);
   const ref2 = useRef(null);
@@ -28,8 +37,15 @@ const Home = forwardRef((_, ref) => {
     <div className={style.Home}>
       <div className={style.videoContainer} ref={ref1}>
         <video src={modelaje} autoPlay loop muted />
+        <ArrowDownCircle
+          onClick={() => {
+            setTimeout(() => {
+              scroll("bottom");
+            }, 0);
+          }}
+        />
       </div>
-      
+
       <Cover ref={ref2} />
       <TheBrand />
       <Quote />
