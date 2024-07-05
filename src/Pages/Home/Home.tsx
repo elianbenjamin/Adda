@@ -9,7 +9,6 @@ import Moodboard from "../../components/Moodboard/Moodboard";
 import Target from "../../components/Target/Target";
 import Catalogue from "../../components/Catalogue/Catalogue";
 import {
-  ArrowDown,
   ArrowDownCircle,
   WhatsappIconBlack,
 } from "../../assets/icons";
