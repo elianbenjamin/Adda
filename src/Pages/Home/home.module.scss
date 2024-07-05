@@ -27,7 +27,7 @@
       color: white;
       height: 50px;
       width: 50px;
-      bottom: 5%;
+      bottom: 10%;
       animation: arrowDownAnimation 8s infinite;
       animation-delay: 5s;
       cursor: pointer;
@@ -58,7 +58,7 @@
     transform: translateY(0);
   }
   8% {
-    transform: translateY(-50px);
+    transform: translateY(-30px);
   }
   12% {
     transform: translateY(0);
