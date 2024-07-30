@@ -85,7 +85,7 @@ export const NavBar = (props: Props) => {
           className={pathname === "/news" ? style.active : ""}
           onClick={() => setMenuOpen(false)}
         >
-          <Link to="/news">NOTICIAS</Link>
+          <Link to="/news">NOVEDADES</Link>
         </li>
       </ul>
 

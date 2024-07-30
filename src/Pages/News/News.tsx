@@ -26,55 +26,20 @@ const News = () => {
         </div>
 
         <p className={style.text}>
-          Estamos emocionados de anunciar el "Desfile en la Bodega de Villa
-          Nueva", un evento imperdible para los amantes de la moda, el sábado 15
-          de julio a las 7:00 PM. Participarán diseñadores nacionales e
-          internacionales, presentando colecciones desde alta costura hasta
-          streetwear vanguardista, con énfasis en la moda ética y sostenible.
+          Estamos emocionadas de anunciar el "Desfile en la Bodega de Villa
+          Nueva", un evento imperdible para los amantes de la moda, el domingo 4
+          de agosto a las 15:00 pm. Participarán más de 20 marcas reconocidas de
+          la ciudad de Villa Maria. Diseñadores presentando colecciones de alta
+          costura, pret a porter, informal, formal, mostrando todo lo último en
+          tendencias
           <br />
           <br />
-          La Bodega de Villa Nueva ofrecerá una experiencia única con
-          degustación de vinos locales y aperitivos gourmet. Los boletos son
-          limitados y están a la venta en nuestra página web. Para más
-          información, visita nuestro sitio web o contáctanos en redes sociales.
-          ¡Te esperamos!
+          La Bodega de Villa Nueva ofrecerá una experiencia única con su
+          servicio de catering. Las entradas son limitadas y aún están a la
+          venta. Para más información, visita nuestro sitio web o contáctanos en
+          redes sociales. ¡Te esperamos!
         </p>
       </article>
-
-      {/* <div className={style.contentContainer}>
-          <h1>¡LA BODEGA EN PASARELA!</h1>
-
-          <div className={style.dateAndUbi}>
-            <div className={style.dateContainer}>
-              <CalendarIcon />
-              <p>4 de Agosto</p>
-            </div>
-            -
-            <div className={style.ubiContainer}>
-              <MapMarkerIcon />
-              <p>LA BODEGA, VILLA NUEVA</p>
-            </div>
-          </div>
-
-          <p className={style.text}>
-            Estamos emocionados de anunciar el "Desfile en la Bodega de Villa
-            Nueva", un evento imperdible para los amantes de la moda, el sábado
-            15 de julio a las 7:00 PM. Participarán diseñadores nacionales e
-            internacionales, presentando colecciones desde alta costura hasta
-            streetwear vanguardista, con énfasis en la moda ética y sostenible.
-            <br />
-            <br />
-            La Bodega de Villa Nueva ofrecerá una experiencia única con
-            degustación de vinos locales y aperitivos gourmet. Los boletos son
-            limitados y están a la venta en nuestra página web. Para más
-            información, visita nuestro sitio web o contáctanos en redes
-            sociales. ¡Te esperamos!
-          </p>
-        </div>
-
-        <div className={style.imgContainer}>
-          <img src={img} />
-        </div> */}
     </div>
   );
 };
