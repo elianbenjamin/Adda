@@ -1,6 +1,6 @@
 import style from "./home.module.scss";
 import Cover from "../../components/Cover/Cover";
-import modelaje from "../../assets/modelaje.mp4";
+import modelaje from "../../assets/modelaje.mov";
 import { forwardRef, useImperativeHandle, useRef } from "react";
 import TheBrand from "../../components/TheBrand/TheBrand";
 import Quote from "../../components/Quote/Quote";
