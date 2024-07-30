@@ -46,7 +46,6 @@ const Home = forwardRef((props: Props, ref) => {
       <Moodboard />
       <Target />
       <Catalogue />
-      {/* <PromotersModelsCourses /> */}
       <a
         className={style["whatsapp-container"]}
         href={`https://wa.me/3534137494?text=${encodeURIComponent("")}`}
