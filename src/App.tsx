@@ -9,7 +9,6 @@ import News from "./Pages/News/News";
 import Footer from "./components/Footer/Footer";
 
 function App() {
-  const { pathname } = useLocation();
   const ref = useRef<{
     ref1: RefObject<HTMLDivElement>;
     ref2: RefObject<HTMLDivElement>;
@@ -25,12 +24,9 @@ function App() {
     }
   };
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathname]);
-
   return (
     <>
+      <ScrollToTop />
       <NavBar scroll={scroll} />
 
       <Routes>
@@ -44,5 +40,16 @@ function App() {
     </>
   );
 }
+
+const ScrollToTop = () => {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+};
+
 
 export default App;
